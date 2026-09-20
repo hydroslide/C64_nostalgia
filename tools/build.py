@@ -350,6 +350,11 @@ def whole_image_load(data: bytes, ext: str) -> dict:
         return {"load": 'LOAD"*",8,1', "start": "run"}
     if addr == BASIC_START:
         return {"load": f'LOAD"{first.name}",8', "start": "run"}
+    if 0x0300 <= addr <= 0x0334:
+        # Loading over the BASIC vectors at $0300 is the old autostart
+        # trick: the next thing BASIC does goes through the vector and into
+        # the loader, so the LOAD itself starts the game.
+        return {"load": f'LOAD"{first.name}",8,1', "start": "(starts by itself)"}
     return {"load": f'LOAD"{first.name}",8,1', "start": f"sys {addr}"}
 
 
@@ -491,7 +496,10 @@ def write_disks_md(manifest: list, out: Path):
             if m["kind"] == "whole_image":
                 lines.append(f"{head} — **{m['title']}**, whole image")
                 cmd = m.get("load") or 'LOAD"*",8,1'
-                lines.append(f"    - `{cmd}` then `{m.get('start', 'run')}`")
+                start = m.get("start", "run")
+                lines.append(f"    - `{cmd}`" +
+                             (f" - {start}" if start.startswith("(")
+                              else f" then `{start}`"))
                 lines.append(f"    - from `{m['from']}`")
                 if m.get("note"):
                     lines.append(f"    - {m['note']}")
