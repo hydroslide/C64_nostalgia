@@ -109,7 +109,27 @@ SIZES = {
 }
 
 
-def open_image(data: bytes) -> CbmImage:
+def coerce_size(data: bytes) -> bytes:
+    """Round a near-miss image to a real one.
+
+    Scene collections are full of .d64s with a few bytes of junk appended or
+    a truncated last track. Both still hold a good directory, so trim or
+    zero-pad to the nearest standard size rather than discarding the disk.
+    """
+    if len(data) in SIZES:
+        return data
+    for size in sorted(SIZES, reverse=True):
+        if size <= len(data) < size * 1.15:
+            return data[:size]
+    for size in sorted(SIZES):
+        if size * 0.97 <= len(data) < size:
+            return data + bytes(size - len(data))
+    raise ValueError(f"unrecognised image size {len(data)}")
+
+
+def open_image(data: bytes, lenient: bool = False) -> CbmImage:
+    if lenient:
+        data = coerce_size(data)
     if len(data) not in SIZES:
         raise ValueError(f"unrecognised image size {len(data)}")
     fmt, tracks = SIZES[len(data)]

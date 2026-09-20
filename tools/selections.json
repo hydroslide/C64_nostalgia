@@ -1,0 +1,1441 @@
+{
+ "D01-1": {
+  "menu": false,
+  "disk_name": "D01 side 1",
+  "disk_id": "01",
+  "items": [
+   {
+    "note": "fuzzy match picked Rambo III; only the Ocean original is in the cache",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\r\\rambo_first_blood_part_ii[ocean_1985](pal)(!).zip",
+     "member": "rambo_first_blood_part_ii[ocean_1985](pal)(!).g64",
+     "disk_name": "\"???? ?\"0:*\",8,1",
+     "kind": "g64"
+    },
+    "title": "Rambo: First Blood Part II"
+   },
+   {
+    "title": "Commando",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\abc\\ai100-3d\\commando.prg",
+    "member": null,
+    "file": "COMMANDO",
+    "blocks": 172
+   },
+   {
+    "title": "Green Beret",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\dynamic_duo\\green beret.prg",
+    "member": null,
+    "file": "GREEN BERET",
+    "blocks": 200
+   }
+  ]
+ },
+ "D01-2": {
+  "menu": false,
+  "disk_name": "D01 side 2",
+  "disk_id": "01",
+  "items": [
+   {
+    "todo": "no C64 release found anywhere - the arcade game was never ported to the 64; the label may mean a clone",
+    "title": "Time Pilot"
+   },
+   {
+    "title": "Helikopter Jagd",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\radwar\\helicopter jagd.prg",
+    "member": null,
+    "file": "HELICOPTER JAGD",
+    "blocks": 133
+   },
+   {
+    "title": "Ghosts'n Goblins",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\fantasy_cracking\\ghosts n goblins.prg",
+    "member": null,
+    "file": "GHOSTS N GOBLINS",
+    "blocks": 181
+   }
+  ]
+ },
+ "D02-1+2": {
+  "menu": false,
+  "disk_name": "D02 side 1+2",
+  "disk_id": "02",
+  "items": [
+   {
+    "title": "World Games",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\w\\world_games_s1[epyx_1986](ntsc)(!).zip",
+     "member": "world_games_s1[epyx_1986](ntsc)(!).g64",
+     "disk_name": "WORLD GAMES SD1",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D03-1": {
+  "menu": false,
+  "disk_name": "D03 side 1",
+  "disk_id": "03",
+  "items": [
+   {
+    "title": "Action Biker",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\abc\\ai100-3d\\action biker.prg",
+    "member": null,
+    "file": "ACTION BIKER",
+    "blocks": 133
+   }
+  ]
+ },
+ "D03-2": {
+  "menu": false,
+  "disk_name": "D03 side 2",
+  "disk_id": "03",
+  "items": [
+   {
+    "note": "Hotline crack; the earlier pick was an unrelated disk called battle.d64",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\hotline\\ai200-dnought\\htl.battlezone+.prg",
+    "member": null,
+    "file": "HTL.BATTLEZONE+",
+    "blocks": 128,
+    "title": "Battlezone"
+   },
+   {
+    "title": "Decathlon",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\jedi\\decathlon.prg",
+    "member": null,
+    "file": "DECATHLON",
+    "blocks": 70
+   },
+   {
+    "note": "fetched from the Internet Archive's C64 library (Atari, 1984)",
+    "src": "downloads\\Jungle_Hunt_1984_Atari__Jungle_Hunt_1984_Atari.d64",
+    "member": null,
+    "file": "JUNGLE HUNT",
+    "blocks": 65,
+    "title": "Jungle Hunt"
+   },
+   {
+    "note": "UNCONFIRMED - the file sits on a disk labelled Tomahawk",
+    "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\t\\tomahawk[digital_integration_1986](alt).zip",
+    "member": "tomahawk[digital_integration_1986](alt).g64",
+    "file": "MOON PATROL",
+    "blocks": 66,
+    "title": "Moon Patrol"
+   },
+   {
+    "title": "Mr. Robot and His Robot Factory",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\jedi\\mr.robot & his.prg",
+    "member": null,
+    "file": "MR.ROBOT & HIS",
+    "blocks": 73
+   },
+   {
+    "title": "Pitfall II: Lost Caverns",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\1103\\pitfall ii.1103.prg",
+    "member": null,
+    "file": "PITFALL II.1103",
+    "blocks": 65
+   },
+   {
+    "title": "Popeye",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\legend\\ai200-lethal\\popeye 3 [tsm].d64",
+    "member": null,
+    "file": "POPEYE 3+2M /TSM",
+    "blocks": 133
+   },
+   {
+    "note": "the single-file hit named \"BC'S QUEST II\" turned out on screen to be B.C. II: Grog's Revenge",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\b\\bcs_quest_for_tires[sierra_1983](!).zip",
+     "member": "bcs_quest_for_tires[sierra_1983](!).g64",
+     "disk_name": "(C) 1983 SOL INC",
+     "kind": "g64"
+    },
+    "title": "B.C.'s Quest for Tires"
+   }
+  ]
+ },
+ "D04-1": {
+  "menu": false,
+  "disk_name": "D04 side 1",
+  "disk_id": "04",
+  "items": [
+   {
+    "title": "Flight Simulator II",
+    "whole_image": {
+     "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\german_cracking_\\flight_simulator.d64",
+     "member": null,
+     "disk_name": "MIC'S DISK",
+     "kind": "disk"
+    }
+   }
+  ]
+ },
+ "D04-2": {
+  "menu": false,
+  "disk_name": "D04 side 2",
+  "disk_id": "04",
+  "items": [
+   {
+    "note": "every single-file hit was a copier parameter",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\b\\bruce_lee[datasoft_1984](!).zip",
+     "member": "bruce_lee[datasoft_1984](!).g64",
+     "disk_name": "BRUCE LEE",
+     "kind": "g64"
+    },
+    "title": "Bruce Lee"
+   }
+  ]
+ },
+ "D05-1": {
+  "menu": true,
+  "disk_name": "D05 side 1",
+  "disk_id": "05",
+  "items": [
+   {
+    "note": "the only single file found was River Raid II",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\r\\river_raid[activision_1984].zip",
+     "member": "river_raid[activision_1984].g64",
+     "disk_name": "CC",
+     "kind": "g64"
+    },
+    "title": "River Raid"
+   },
+   {
+    "title": "Slamball",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\german_cracking_\\gcs slamball.prg",
+    "member": null,
+    "file": "GCS SLAMBALL",
+    "blocks": 128
+   },
+   {
+    "title": "Starfire",
+    "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\e\\epyx_sampler_disk[epyx_1983].zip",
+    "member": "epyx_sampler_disk[epyx_1983].g64",
+    "file": "STARFIRE",
+    "blocks": 114
+   },
+   {
+    "title": "Fire One",
+    "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\e\\epyx_sampler_disk[epyx_1983].zip",
+    "member": "epyx_sampler_disk[epyx_1983].g64",
+    "file": "FIREONE",
+    "blocks": 114
+   },
+   {
+    "title": "Moon Shuttle",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\m\\moon_shuttle[datasoft_1983](!).zip",
+     "member": "moon_shuttle[datasoft_1983](!).g64",
+     "disk_name": "????????????????",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D05-2": {
+  "menu": true,
+  "disk_name": "D05 side 2",
+  "disk_id": "05",
+  "items": [
+   {
+    "title": "Ghostbusters",
+    "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\b\\big_box_big_1_s10[beau-jolly_1989](comp)(pal).zip",
+    "member": "big_box_big_1_s10[beau-jolly_1989](comp)(pal).g64",
+    "file": "GHOST BUSTERS",
+    "blocks": 184
+   },
+   {
+    "note": "side 2 of the Xonox double-ender - side 1 is Spike's Peak; the single-file hit was a Kracker Jax parameter",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\s\\spikes_peak-ghost_manor_s2[xonox_1983].zip",
+     "member": "spikes_peak-ghost_manor_s2[xonox_1983].g64",
+     "disk_name": "GHOST",
+     "kind": "g64"
+    },
+    "title": "Ghost Manor"
+   },
+   {
+    "note": "fetched from the Internet Archive - the Spanish Load 'n' Run release; same game, Spanish title screen",
+    "src": "downloads\\H.E.R.O._El_Heroe_1984_Activision_es_h_Load_n_Run__H.E.R.O._El_Heroe_1984_Activision_es_h_Load_n_Run.d64",
+    "member": null,
+    "file": "EL HEROE",
+    "blocks": 66,
+    "title": "H.E.R.O."
+   },
+   {
+    "note": "the MONSTERS file found was from Dragons of Flame",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\m\\monster_smash[datamost_1983](!).zip",
+     "member": "monster_smash[datamost_1983](!).g64",
+     "disk_name": "MONSTER SMASH!",
+     "kind": "g64"
+    },
+    "title": "Monster Smash"
+   }
+  ]
+ },
+ "D06-front": {
+  "menu": false,
+  "disk_name": "D06 side front",
+  "disk_id": "06",
+  "items": [
+   {
+    "title": "Kung-Fu Master",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\federation_again\\kung_fu_master.d64",
+    "member": null,
+    "file": "-KUNG FU MASTER-",
+    "blocks": 13
+   }
+  ]
+ },
+ "D06-back": {
+  "menu": false,
+  "disk_name": "D06 side back",
+  "disk_id": "06",
+  "items": [
+   {
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\k\\kung-fu_way_of_the_exploding_fist[melbourne_house_1985](pal)(!).zip",
+     "member": "kung-fu_way_of_the_exploding_fist[melbourne_house_1985](pal)(!).g64",
+     "disk_name": "MELBOURNE  HOUSE",
+     "kind": "g64"
+    },
+    "title": "The Way of the Exploding Fist"
+   }
+  ]
+ },
+ "D07-1": {
+  "menu": false,
+  "disk_name": "D07 side 1",
+  "disk_id": "07",
+  "items": [
+   {
+    "title": "Kermit's Electronic Storymaker",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\k\\kermits_electronic_storymaker[simon-schuster_1984].zip",
+     "member": "kermits_electronic_storymaker[simon-schuster_1984].g64",
+     "disk_name": "STORYMAKER DISK",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D07-2": {
+  "menu": false,
+  "disk_name": "D07 side 2",
+  "disk_id": "07",
+  "items": [
+   {
+    "title": "Turtle Toyland Jr.",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\t\\turtle_toyland_junior[hes_1983](!).zip",
+     "member": "turtle_toyland_junior[hes_1983](!).g64",
+     "disk_name": "?????? GRAPHICS",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D08-1": {
+  "menu": false,
+  "disk_name": "D08 side 1",
+  "disk_id": "08",
+  "items": [
+   {
+    "title": "HesGames",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\h\\hes_games[hesware_1984](!).zip",
+     "member": "hes_games[hesware_1984](!).g64",
+     "disk_name": "(C) HESWARE 84",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D08-2": {
+  "menu": false,
+  "disk_name": "D08 side 2",
+  "disk_id": "08",
+  "items": [
+   {
+    "title": "Summer Games",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\s\\summer_games[epyx_1984](pal)(!).zip",
+     "member": "summer_games[epyx_1984](pal)(!).g64",
+     "disk_name": "SUMMER GAMES",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D09-1": {
+  "menu": false,
+  "disk_name": "D09 side 1",
+  "disk_id": "09",
+  "items": [
+   {
+    "note": "the PITFAL file found sits on a Game Maker sampler",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\p\\pitfall[activision_1984](!).zip",
+     "member": "pitfall[activision_1984](!).g64",
+     "disk_name": "CC",
+     "kind": "g64"
+    },
+    "title": "Pitfall!"
+   },
+   {
+    "title": "Spelunker",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\s\\spelunker[ariolasoft_198x](pal)(!).zip",
+     "member": "spelunker[ariolasoft_198x](pal)(!).g64",
+     "disk_name": "SPELUNKER",
+     "kind": "g64"
+    }
+   },
+   {
+    "title": "Popeye",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\legend\\ai200-lethal\\popeye 3 [tsm].d64",
+    "member": null,
+    "file": "POPEYE 3+2M /TSM",
+    "blocks": 133
+   },
+   {
+    "title": "Raid Over Moscow",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\r\\raid_over_moscow[access_1984](ntsc)(newer)(!).zip",
+     "member": "raid_over_moscow[access_1984](ntsc)(newer)(!).g64",
+     "disk_name": "RAID OVER MOSCOW",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D09-2": {
+  "menu": false,
+  "disk_name": "D09 side 2",
+  "disk_id": "09",
+  "items": [
+   {
+    "title": "Lords of Conquest",
+    "whole_image": {
+     "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\eagle_soft_incor\\ai100-008\\lords_of_conques.d64",
+     "member": null,
+     "disk_name": ">>>  WARREN  <<<",
+     "kind": "disk"
+    }
+   }
+  ]
+ },
+ "D10-1": {
+  "menu": false,
+  "disk_name": "D10 side 1",
+  "disk_id": "10",
+  "items": [
+   {
+    "title": "F-15 Strike Eagle",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\f\\f15_strike_eagle[microprose_1984](!).zip",
+     "member": "f15_strike_eagle[microprose_1984](!).g64",
+     "disk_name": "XEMAG 2.0",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D10-2": {
+  "menu": false,
+  "disk_name": "D10 side 2",
+  "disk_id": "10",
+  "items": [
+   {
+    "note": "fetched from the Internet Archive; multi-file, so the whole side goes on",
+    "whole_image": {
+     "src": "downloads\\d64_SubLogic_Football_1986_Sublogic__SubLogic_Football_1986_Sublogic.d64",
+     "member": null,
+     "disk_name": "ASS PRESENTS:",
+     "kind": "disk"
+    },
+    "title": "Sublogic Football"
+   },
+   {
+    "todo": "label never identified",
+    "title": "Mac Music"
+   }
+  ]
+ },
+ "D11-1": {
+  "menu": false,
+  "disk_name": "D11 side 1",
+  "disk_id": "11",
+  "items": [
+   {
+    "title": "Fist: The Legend Continues",
+    "whole_image": {
+     "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\yeti\\fist_ii.d64",
+     "member": null,
+     "disk_name": "-ROUGH/REMEMBER-",
+     "kind": "disk"
+    }
+   }
+  ]
+ },
+ "D11-2": {
+  "menu": false,
+  "disk_name": "D11 side 2",
+  "disk_id": "11",
+  "items": [
+   {
+    "title": "Ninja",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\fantasy_cracking\\ninja (fcs).prg",
+    "member": null,
+    "file": "NINJA",
+    "blocks": 99
+   }
+  ]
+ },
+ "D12-1": {
+  "menu": false,
+  "disk_name": "D12 side 1",
+  "disk_id": "12",
+  "items": [
+   {
+    "title": "Double Dare",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\the_ruling_compa\\ai100-\\double dare - tr.d64",
+    "member": null,
+    "file": "DOUBLE DARE /TRC",
+    "blocks": 105
+   }
+  ]
+ },
+ "D13-1": {
+  "menu": false,
+  "disk_name": "D13 side 1",
+  "disk_id": "13",
+  "items": [
+   {
+    "title": "Double Dragon",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\d\\double_dragon[mastertronic_1988](ad)(!).zip",
+     "member": "double_dragon[mastertronic_1988](ad)(!).g64",
+     "disk_name": "DOUBLE DRAGON-N",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D13-2": {
+  "menu": false,
+  "disk_name": "D13 side 2",
+  "disk_id": "13",
+  "items": [
+   {
+    "title": "RoboCop",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\r\\robocop[data_east_1987](ntsc)(!).zip",
+     "member": "robocop[data_east_1987](ntsc)(!).g64",
+     "disk_name": "ROBOCOP",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D14-1+2": {
+  "menu": false,
+  "disk_name": "D14 side 1+2",
+  "disk_id": "14",
+  "items": [
+   {
+    "title": "Summer Games II",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\s\\summer_games_ii_s1[us_gold_1985](gs-3disk)(pal)(!).zip",
+     "member": "summer_games_ii_s1[us_gold_1985](gs-3disk)(pal)(!).g64",
+     "disk_name": "P  <><><",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D15-1": {
+  "menu": false,
+  "disk_name": "D15 side 1",
+  "disk_id": "15",
+  "items": [
+   {
+    "title": "Kermit's Electronic Storymaker",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\k\\kermits_electronic_storymaker[simon-schuster_1984].zip",
+     "member": "kermits_electronic_storymaker[simon-schuster_1984].g64",
+     "disk_name": "STORYMAKER DISK",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D15-2": {
+  "menu": false,
+  "disk_name": "D15 side 2",
+  "disk_id": "15",
+  "items": [
+   {
+    "note": "fetched from the Internet Archive (Spinnaker, 1983); multi-file, so the whole side goes on",
+    "whole_image": {
+     "src": "downloads\\Hey_Diddle_Diddle_1983_Spinnaker_Software__Hey_Diddle_Diddle_1983_Spinnaker_Software.d64",
+     "member": null,
+     "disk_name": "ASS PRESENTS:",
+     "kind": "disk"
+    },
+    "title": "Hey Diddle Diddle"
+   }
+  ]
+ },
+ "D16-1": {
+  "menu": true,
+  "disk_name": "D16 side 1",
+  "disk_id": "16",
+  "items": [
+   {
+    "todo": "still not found - the archive's 'Caveman' is a 1990 Compute! type-in and 'Crazy Caveman' does not look like the arcade game",
+    "title": "Caveman"
+   },
+   {
+    "title": "Cohen's Towers",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\german_cracking_\\cohens towers.prg",
+    "member": null,
+    "file": "COHENS TOWERS",
+    "blocks": 115
+   },
+   {
+    "note": "the PITFAL file found sits on a Game Maker sampler",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\p\\pitfall[activision_1984](!).zip",
+     "member": "pitfall[activision_1984](!).g64",
+     "disk_name": "CC",
+     "kind": "g64"
+    },
+    "title": "Pitfall!"
+   },
+   {
+    "note": "fetched from the Internet Archive's C64 library (Atari, 1984)",
+    "src": "downloads\\Jungle_Hunt_1984_Atari__Jungle_Hunt_1984_Atari.d64",
+    "member": null,
+    "file": "JUNGLE HUNT",
+    "blocks": 65,
+    "title": "Jungle Hunt"
+   },
+   {
+    "note": "the single-file hit named \"BC'S QUEST II\" turned out on screen to be B.C. II: Grog's Revenge",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\b\\bcs_quest_for_tires[sierra_1983](!).zip",
+     "member": "bcs_quest_for_tires[sierra_1983](!).g64",
+     "disk_name": "(C) 1983 SOL INC",
+     "kind": "g64"
+    },
+    "title": "B.C.'s Quest for Tires"
+   },
+   {
+    "title": "Popeye",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\legend\\ai200-lethal\\popeye 3 [tsm].d64",
+    "member": null,
+    "file": "POPEYE 3+2M /TSM",
+    "blocks": 133
+   },
+   {
+    "title": "Mr. Robot and His Robot Factory",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\jedi\\mr.robot & his.prg",
+    "member": null,
+    "file": "MR.ROBOT & HIS",
+    "blocks": 73
+   }
+  ]
+ },
+ "D17-1": {
+  "menu": false,
+  "disk_name": "D17 side 1",
+  "disk_id": "17",
+  "items": [
+   {
+    "note": "the disk holds a 1-block loader; it needs the whole image",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\b\\blue_thunder[elite_1984](pal)(!).zip",
+     "member": "blue_thunder[elite_1984](pal)(!).g64",
+     "disk_name": "\"BLUE THUNDA DIS",
+     "kind": "g64"
+    },
+    "title": "Blue Thunder"
+   },
+   {
+    "note": "the 23-block hit was Agent U.O.P., a different game",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\a\\agent_usa[wizware_1984](!).zip",
+     "member": "agent_usa[wizware_1984](!).g64",
+     "disk_name": "??????",
+     "kind": "g64"
+    },
+    "title": "Agent USA"
+   },
+   {
+    "title": "Robin of the Wood",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\abc\\ai100-3d\\robin o.t. wood.prg",
+    "member": null,
+    "file": "ROBIN O.T. WOOD",
+    "blocks": 197
+   },
+   {
+    "title": "Harrier Attack",
+    "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\h\\harrier_attack[durell_1984].zip",
+    "member": "harrier_attack[durell_1984].g64",
+    "file": "HARRIER ATTACK",
+    "blocks": 65
+   },
+   {
+    "note": "SUBSTITUTE - Boulder Dash II (Rockford's Riot) is not in the cache, this is the first game",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\b\\boulder_dash[first_star_1984](pal)(!).zip",
+     "member": "boulder_dash[first_star_1984](pal)(!).g64",
+     "disk_name": "BOULDER-DASH ONE",
+     "kind": "g64"
+    },
+    "title": "Boulder Dash II"
+   }
+  ]
+ },
+ "D17-2": {
+  "menu": false,
+  "disk_name": "D17 side 2",
+  "disk_id": "17",
+  "items": [
+   {
+    "title": "Shadowfire",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\s\\shadowfire[mindscape_1985](ntsc)(!).zip",
+     "member": "shadowfire[mindscape_1985](ntsc)(!).g64",
+     "disk_name": "??SHADOWFIRE???",
+     "kind": "g64"
+    }
+   },
+   {
+    "title": "Beyond the Ice Palace",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\fucked_beyond_re\\ice palace.prg",
+    "member": null,
+    "file": "ICE PALACE",
+    "blocks": 188
+   },
+   {
+    "title": "Rocketball",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\section8\\rocket ball.prg",
+    "member": null,
+    "file": "ROCKET BALL",
+    "blocks": 173
+   },
+   {
+    "title": "The Dolphin's Rune",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\d\\dolphins_rune[mindscape_1985](!).zip",
+     "member": "dolphins_rune[mindscape_1985](!).g64",
+     "disk_name": "??? DOLPHIN ???",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D18-2": {
+  "menu": false,
+  "disk_name": "D18 side 2",
+  "disk_id": "18",
+  "items": [
+   {
+    "title": "Dragonriders of Pern",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\d\\dragonriders_of_pern[epyx_1983](64)(!).zip",
+     "member": "dragonriders_of_pern[epyx_1983](64)(!).g64",
+     "disk_name": "??????RIDERS",
+     "kind": "g64"
+    }
+   },
+   {
+    "title": "Spooks",
+    "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\s\\spooks[mastertronic_1985](alt1).zip",
+    "member": "spooks[mastertronic_1985](alt1).g64",
+    "file": "SPOOKS!",
+    "blocks": 132
+   },
+   {
+    "todo": "label too generic to identify",
+    "title": "Boxing"
+   },
+   {
+    "title": "Wizard's Lair",
+    "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\w\\wizards_lair[prism_leisure_1988](pal).zip",
+    "member": "wizards_lair[prism_leisure_1988](pal).g64",
+    "file": "WIZARDSLAIR",
+    "blocks": 181
+   }
+  ]
+ },
+ "D19-1": {
+  "menu": false,
+  "disk_name": "D19 side 1",
+  "disk_id": "19",
+  "items": [
+   {
+    "title": "Star Wars",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\s\\star_wars[br0derbund_1988](ntsc)(!).zip",
+     "member": "star_wars[br0derbund_1988](ntsc)(!).g64",
+     "disk_name": "STAR WARS",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D20-1": {
+  "menu": false,
+  "disk_name": "D20 side 1",
+  "disk_id": "20",
+  "items": [
+   {
+    "note": "fetched from the Internet Archive (Alligata, 1983)",
+    "src": "downloads\\Haunted_House_1983_Alligata_Software__Haunted_House_1983_Alligata_Software.d64",
+    "member": null,
+    "file": "HAUNTED HOUSE",
+    "blocks": 79,
+    "title": "Haunted House"
+   }
+  ]
+ },
+ "D20-2": {
+  "menu": false,
+  "disk_name": "D20 side 2",
+  "disk_id": "20",
+  "items": [
+   {
+    "note": "PINECREST MANOR on its own is a story file, not a program - it needs Scholastic's Tales of Mystery engine, so the whole side goes on",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\t\\tales_of_mystery_s2[scholastic_1984].zip",
+     "member": "tales_of_mystery_s2[scholastic_1984].g64",
+     "disk_name": "??????EST MANOR",
+     "kind": "g64"
+    },
+    "title": "Mystery at Pinecrest Manor"
+   }
+  ]
+ },
+ "D21-1": {
+  "menu": false,
+  "disk_name": "D21 side 1",
+  "disk_id": "21",
+  "items": [
+   {
+    "title": "West Bank",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\hotline\\ai400-superstar\\westbank [htl].prg",
+    "member": null,
+    "file": "WESTBANK",
+    "blocks": 163
+   },
+   {
+    "title": "Gauntlet",
+    "whole_image": {
+     "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\dynamic_duo\\gauntlet.d64",
+     "member": null,
+     "disk_name": "GAUNTLET    1986",
+     "kind": "disk"
+    }
+   }
+  ]
+ },
+ "D21-2": {
+  "menu": false,
+  "disk_name": "D21 side 2",
+  "disk_id": "21",
+  "items": [
+   {
+    "note": "the draft reused the plain Gauntlet disk",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\g\\gauntlet_deeper_dungeons[us_gold_1987](ntsc).zip",
+     "member": "gauntlet_deeper_dungeons[us_gold_1987](ntsc).g64",
+     "disk_name": "V-MAX!          ",
+     "kind": "g64"
+    },
+    "title": "Gauntlet: The Deeper Dungeons"
+   }
+  ]
+ },
+ "D22-1": {
+  "menu": false,
+  "disk_name": "D22 side 1",
+  "disk_id": "22",
+  "items": [
+   {
+    "note": "Eagle Soft crack, multi-file (LDR + GAME.A/B) so it needs the whole side; the KARATE CHAMP hit is Data East's Karate Champ, a different game",
+    "whole_image": {
+     "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\eagle_soft_incor\\ai200-mightm1b\\world_karate_cha.d64",
+     "member": null,
+     "disk_name": "WORLD C KARATE",
+     "kind": "disk"
+    },
+    "title": "World Karate Championship"
+   }
+  ]
+ },
+ "D22-2": {
+  "menu": false,
+  "disk_name": "D22 side 2",
+  "disk_id": "22",
+  "items": [
+   {
+    "title": "Leader Board",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\l\\leaderboard[access_1986](dongle)(ntsc)(!).zip",
+     "member": "leaderboard[access_1986](dongle)(ntsc)(!).g64",
+     "disk_name": "LEADER BOARD",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D23-1": {
+  "menu": false,
+  "disk_name": "D23 side 1",
+  "disk_id": "23",
+  "items": [
+   {
+    "title": "10th Frame",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\0\\10th_frame[access_1986](dongle)(alt2)(!).zip",
+     "member": "10th_frame[access_1986](dongle)(alt2)(!).g64",
+     "disk_name": "10TH FRAME",
+     "kind": "g64"
+    }
+   },
+   {
+    "title": "Leader Board Tournament / World Class Leader Board",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\untouchable_crac\\world_class_lead.d64",
+    "member": null,
+    "file": "LEADERBOARD",
+    "blocks": 51
+   }
+  ]
+ },
+ "D24-1+2": {
+  "menu": false,
+  "disk_name": "D24 side 1+2",
+  "disk_id": "24",
+  "items": [
+   {
+    "title": "Adventure Construction Set",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\a\\adventure_construction_set_s1[ea_1984](!).zip",
+     "member": "adventure_construction_set_s1[ea_1984](!).g64",
+     "disk_name": "??LOAD\"EA\",8,1?",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D25-1": {
+  "menu": false,
+  "disk_name": "D25 side 1",
+  "disk_id": "25",
+  "items": [
+   {
+    "note": "UNCONFIRMED - a Centipede-style game on a Keypunch compilation",
+    "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\a\\arcade_games[keypunch_198x](!).zip",
+    "member": "arcade_games[keypunch_198x](!).g64",
+    "file": "CENTRIPOD",
+    "blocks": 44,
+    "title": "Centropods"
+   }
+  ]
+ },
+ "D25-2": {
+  "menu": false,
+  "disk_name": "D25 side 2",
+  "disk_id": "25",
+  "items": [
+   {
+    "note": "fetched from the Internet Archive (Aardvark, 1984) - the label says SYS 16384, which the build works out from the file itself",
+    "src": "downloads\\Bagitman_1984_Aardvark_Software__Bagitman_1984_Aardvark_Software.d64",
+    "member": null,
+    "file": "BAGITMAN",
+    "blocks": 57,
+    "title": "Bagitman"
+   },
+   {
+    "note": "the earlier pick was Upside Down, a different game",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\u\\up_n_down[sega_1984](!).zip",
+     "member": "up_n_down[sega_1984](!).g64",
+     "disk_name": "AA",
+     "kind": "g64"
+    },
+    "title": "Up'n Down"
+   },
+   {
+    "note": "everything else matching 'genesis' was the Genesis Project cracking group",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\g\\genesis[datasoft_1983](!).zip",
+     "member": "genesis[datasoft_1983](!).g64",
+     "disk_name": "????????????????",
+     "kind": "g64"
+    },
+    "title": "Genesis"
+   },
+   {
+    "note": "fetched from the Internet Archive (Mr. Computer, 1983)",
+    "src": "downloads\\d64_Marios_Brewery_1983_Mr._Computer__Marios_Brewery_1983_Mr._Computer.d64",
+    "member": null,
+    "file": "MARIO'S BREWERY",
+    "blocks": 11,
+    "title": "Mario's Brewery"
+   },
+   {
+    "note": "fetched from the Internet Archive (Ocean, 1984)",
+    "src": "downloads\\d64_Mr._Wimpy_The_Hamburger_Game_1984_Ocean_h_ASS__Mr._Wimpy_The_Hamburger_Game_1984_Ocean_h_ASS.d64",
+    "member": null,
+    "file": "MR. WIMPY",
+    "blocks": 41,
+    "title": "Mr. Wimpy"
+   }
+  ]
+ },
+ "D26-1": {
+  "menu": false,
+  "disk_name": "D26 side 1",
+  "disk_id": "26",
+  "items": [
+   {
+    "title": "Mr. Do!",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\hotline\\ai300-micro\\mr do.prg",
+    "member": null,
+    "file": "MR DO",
+    "blocks": 141
+   },
+   {
+    "title": "WarGames",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\w\\wargames[coleco_1984](!).zip",
+     "member": "wargames[coleco_1984](!).g64",
+     "disk_name": "WARGAMES 64",
+     "kind": "g64"
+    }
+   },
+   {
+    "note": "fetched from the Internet Archive (Interceptor Micros, 1984)",
+    "src": "downloads\\Bigtop_Barney_1984_Interceptor_Micros__Bigtop_Barney_1984_Interceptor_Micros.d64",
+    "member": null,
+    "file": "BIGTOP BARNEY",
+    "blocks": 180,
+    "title": "Big Top Barney"
+   }
+  ]
+ },
+ "D26-2": {
+  "menu": false,
+  "disk_name": "D26 side 2",
+  "disk_id": "26",
+  "items": [
+   {
+    "title": "Hacker",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\section8\\hacker (s8).prg",
+    "member": null,
+    "file": "HACKER",
+    "blocks": 196
+   },
+   {
+    "title": "Hacker II",
+    "whole_image": {
+     "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\federation_again\\hacker_ii.d64",
+     "member": null,
+     "disk_name": "",
+     "kind": "disk"
+    }
+   },
+   {
+    "note": "fetched from the Internet Archive (Creative Sparks, 1984); loads in two parts, so the whole side goes on",
+    "whole_image": {
+     "src": "downloads\\Danger_Mouse_in_the_Black_Forest_Chateau_1984_Creative_Sparks_cr_CMM__Danger_Mouse_in_the_Black_Forest_Chateau_1984_Creative_Sparks_cr_CMM.d64",
+     "member": null,
+     "disk_name": "ASS PRESENTS:",
+     "kind": "disk"
+    },
+    "title": "Danger Mouse in the Black Forest Chateau"
+   }
+  ]
+ },
+ "D27-1": {
+  "menu": false,
+  "disk_name": "D27 side 1",
+  "disk_id": "27",
+  "items": [
+   {
+    "title": "Hat Trick",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\h\\hat_trick[capcom_1987].zip",
+     "member": "hat_trick[capcom_1987].g64",
+     "disk_name": "HAT TRICK",
+     "kind": "g64"
+    }
+   },
+   {
+    "note": "SUBSTITUTE - no C64 game is called Rad Skater; Skate or Die (EA, 1987) is the likeliest thing the label meant",
+    "src": "downloads\\Skate_or_Die_1987_Electronic_Arts__Skate_or_Die_1987_Electronic_Arts.d64",
+    "member": null,
+    "file": "SKATE OR ACE/GCF",
+    "blocks": 106,
+    "title": "Rad Skater"
+   }
+  ]
+ },
+ "D27-2": {
+  "menu": false,
+  "disk_name": "D27 side 2",
+  "disk_id": "27",
+  "items": [
+   {
+    "title": "Fist: The Legend Continues",
+    "whole_image": {
+     "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\yeti\\fist_ii.d64",
+     "member": null,
+     "disk_name": "-ROUGH/REMEMBER-",
+     "kind": "disk"
+    }
+   }
+  ]
+ },
+ "D28-1+2": {
+  "menu": false,
+  "disk_name": "D28 side 1+2",
+  "disk_id": "28",
+  "items": [
+   {
+    "title": "Winter Games",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\w\\winter_games_s1[epyx_1985](pal)(!).zip",
+     "member": "winter_games_s1[epyx_1985](pal)(!).g64",
+     "disk_name": "SIDE1\"??AMES????",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D29-1": {
+  "menu": false,
+  "disk_name": "D29 side 1",
+  "disk_id": "29",
+  "items": [
+   {
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\plutonium_cracke\\mario_bros.d64",
+    "member": null,
+    "file": "MARIO BROS. ?PC?",
+    "blocks": 164,
+    "title": "Mario Bros."
+   }
+  ]
+ },
+ "D29-2": {
+  "menu": false,
+  "disk_name": "D29 side 2",
+  "disk_id": "29",
+  "items": [
+   {
+    "todo": "label never identified",
+    "title": "36-game compilation"
+   }
+  ]
+ },
+ "D30-1": {
+  "menu": false,
+  "disk_name": "D30 side 1",
+  "disk_id": "30",
+  "items": [
+   {
+    "title": "Donald Duck's Playground",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\d\\donald_ducks_playground[sierra_online_1984](01)(!).zip",
+     "member": "donald_ducks_playground[sierra_online_1984](01)(!).g64",
+     "disk_name": "(C) 1984 W.D.P.",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D31-1": {
+  "menu": true,
+  "disk_name": "D31 side 1",
+  "disk_id": "31",
+  "items": [
+   {
+    "note": "the file on the disk loads at $0400, over screen memory - it is a loader stage, not the game",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\d\\dino_eggs[micro_fun_1984](ntsc)(!).zip",
+     "member": "dino_eggs[micro_fun_1984](ntsc)(!).g64",
+     "disk_name": "DINO EGGS",
+     "kind": "g64"
+    },
+    "title": "Dino Eggs"
+   },
+   {
+    "title": "Donkey Kong",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\1103\\donkey kong.prg",
+    "member": null,
+    "file": "DONKEY KONG",
+    "blocks": 49
+   }
+  ]
+ },
+ "D31-2": {
+  "menu": false,
+  "disk_name": "D31 side 2",
+  "disk_id": "31",
+  "items": [
+   {
+    "note": "fetched from the Internet Archive; multi-file, so the whole side goes on",
+    "whole_image": {
+     "src": "downloads\\d64_SubLogic_Football_1986_Sublogic__SubLogic_Football_1986_Sublogic.d64",
+     "member": null,
+     "disk_name": "ASS PRESENTS:",
+     "kind": "disk"
+    },
+    "title": "Sublogic Football"
+   }
+  ]
+ },
+ "D32-1": {
+  "menu": false,
+  "disk_name": "D32 side 1",
+  "disk_id": "32",
+  "items": [
+   {
+    "title": "West Bank",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\hotline\\ai400-superstar\\westbank [htl].prg",
+    "member": null,
+    "file": "WESTBANK",
+    "blocks": 163
+   },
+   {
+    "title": "Gauntlet",
+    "whole_image": {
+     "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\dynamic_duo\\gauntlet.d64",
+     "member": null,
+     "disk_name": "GAUNTLET    1986",
+     "kind": "disk"
+    }
+   }
+  ]
+ },
+ "D33-1": {
+  "menu": false,
+  "disk_name": "D33 side 1",
+  "disk_id": "33",
+  "items": [
+   {
+    "title": "Stickybear Typing",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\s\\stickybear_typing[optimum_resource_1985].zip",
+     "member": "stickybear_typing[optimum_resource_1985].g64",
+     "disk_name": "OPTIMUM RESOURCE",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D34-1": {
+  "menu": false,
+  "disk_name": "D34 side 1",
+  "disk_id": "34",
+  "items": [
+   {
+    "title": "Songwriter",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\s\\songwriter[learningways_1983].zip",
+     "member": "songwriter[learningways_1983].g64",
+     "disk_name": "SONGWRITER 1984 ",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D34-2": {
+  "menu": false,
+  "disk_name": "D34 side 2",
+  "disk_id": "34",
+  "items": [
+   {
+    "title": "The Factory",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\t\\the_factory[hes_1983](!).zip",
+     "member": "the_factory[hes_1983](!).g64",
+     "disk_name": "FACTORY HS",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D35-1": {
+  "menu": false,
+  "disk_name": "D35 side 1",
+  "disk_id": "35",
+  "items": [
+   {
+    "note": "fetched from the Internet Archive - the Spanish Load 'n' Run release of the Parker Brothers game",
+    "src": "downloads\\Gyruss_Planeta_Alienigena_1984_Parker_Brothers_es_h_Load_n_Run__Gyruss_Planeta_Alienigena_1984_Parker_Brothers_es_h_Load_n_Run.d64",
+    "member": null,
+    "file": "PLANETA ALIENIG.",
+    "blocks": 127,
+    "title": "Gyruss"
+   }
+  ]
+ },
+ "D35-2": {
+  "menu": false,
+  "disk_name": "D35 side 2",
+  "disk_id": "35",
+  "items": [
+   {
+    "title": "Slap Shot",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\section8\\slap shot.prg",
+    "member": null,
+    "file": "SLAP SHOT",
+    "blocks": 159
+   }
+  ]
+ },
+ "D36-1": {
+  "menu": false,
+  "disk_name": "D36 side 1",
+  "disk_id": "36",
+  "items": [
+   {
+    "note": "fetched from the Internet Archive (Advanced Ideas, 1984); multi-file, so the whole side goes on",
+    "whole_image": {
+     "src": "downloads\\Game_Show_The_1984_Advanced_Ideas__Game_Show_The_1984_Advanced_Ideas.d64",
+     "member": null,
+     "disk_name": "GS",
+     "kind": "disk"
+    },
+    "title": "The Game Show"
+   }
+  ]
+ },
+ "D37-1+2": {
+  "menu": false,
+  "disk_name": "D37 side 1+2",
+  "disk_id": "37",
+  "items": [
+   {
+    "title": "Druid",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\d\\druid[firebird_1986](pal)(!).zip",
+     "member": "druid[firebird_1986](pal)(!).g64",
+     "disk_name": "????????  PARANO",
+     "kind": "g64"
+    }
+   },
+   {
+    "title": "Dragonskulle",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\1001\\dskulle.d64",
+    "member": null,
+    "file": "DRAGONSKULLE",
+    "blocks": 77
+   },
+   {
+    "title": "Paperboy",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\p\\paperboy[mindscape_1986](ntsc)(!).zip",
+     "member": "paperboy[mindscape_1986](ntsc)(!).g64",
+     "disk_name": "MINDSCAPE INC",
+     "kind": "g64"
+    }
+   },
+   {
+    "title": "Dragon's Lair",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\d\\dragons_lair[ea_1986](ntsc)(!).zip",
+     "member": "dragons_lair[ea_1986](ntsc)(!).g64",
+     "disk_name": "ELECTRONIC ARTS",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D38-1": {
+  "menu": false,
+  "disk_name": "D38 side 1",
+  "disk_id": "38",
+  "items": [
+   {
+    "note": "the earlier pick was Road Runner",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\l\\lode_runner[br0derbund_1983](lr)(yellow_label)(!).zip",
+     "member": "lode_runner[br0derbund_1983](lr)(yellow_label)(!).g64",
+     "disk_name": "LODE RUNNER",
+     "kind": "g64"
+    },
+    "title": "Lode Runner"
+   }
+  ]
+ },
+ "D39-1": {
+  "menu": false,
+  "disk_name": "D39 side 1",
+  "disk_id": "39",
+  "items": [
+   {
+    "title": "Mail Order Monsters",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\m\\mail_order_monsters[ea_1984](!).zip",
+     "member": "mail_order_monsters[ea_1984](!).g64",
+     "disk_name": "??LOAD\"EA\",8,1?",
+     "kind": "g64"
+    }
+   }
+  ]
+ },
+ "D40-1": {
+  "menu": false,
+  "disk_name": "D40 side 1",
+  "disk_id": "40",
+  "items": [
+   {
+    "title": "Assembler",
+    "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\a\\assembler_development_system[commodore_1982](!).zip",
+    "member": "assembler_development_system[commodore_1982](!).g64",
+    "file": "ASSEMBLER64",
+    "blocks": 39
+   }
+  ]
+ },
+ "D40-2": {
+  "menu": true,
+  "disk_name": "D40 side 2",
+  "disk_id": "40",
+  "items": [
+   {
+    "title": "Pharaoh's Curse",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\jedi\\pharaohs curse.prg",
+    "member": null,
+    "file": "PHARAOHS CURSE",
+    "blocks": 160
+   },
+   {
+    "title": "Pinball",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\federation_again\\pinball.prg",
+    "member": null,
+    "file": "PINBALL",
+    "blocks": 133
+   },
+   {
+    "note": "the disk file was a 1-block loader",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\s\\stellar_7[penguin_1984](pal)(!).zip",
+     "member": "stellar_7[penguin_1984](pal)(!).g64",
+     "disk_name": "STELLAR 7",
+     "kind": "g64"
+    },
+    "title": "Stellar 7"
+   }
+  ]
+ }
+}
