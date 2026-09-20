@@ -46,19 +46,34 @@ python tools\build_rot.py
 | `RAISE` | 3.5 | How far the board sits above the floor-aligned position. Raising it makes the light tunnel shallower and the encoder shaft stick out further. **Capped**: the ports must stay under the lower panel's top edge (z=-2) and below the seam. |
 | `BACKOFF` | 3.5 | How far the board sits off the right wall, so the top can drop straight down past the switches. |
 | `NUB_STEMS` | 1.0 / 2.0 / 3.0 mm proud | Stem length of the three button nubs. The cup and collar (`COLLAR_L`, `BORE_*`) stay the same across all three. |
+| `SLOT_W` | 3.9 | Width of the channel that opens one side of the nub's cup, so the plunger enters sideways and the board drops straight down instead of being wiggled on. Sized to the 3.5 mm plunger: wide enough to pass, tight enough that the nub cannot spin in its hole. |
+| `MOUTH_RELIEF` | 1.11 | How much of the cup's mouth end is cut away **all round**. The 6.4 mm switch body is as wide as the 6.5 mm flange, so a one-sided slot is not enough on its own -- the back rim of the cup fouls the body too. Derived from `SWITCH_OVERLAP` (0.76 mm) plus clearance. |
 | `VENT_*` | 13 grooves, 2 mm pitch | The 1541-style vent band across the rear of the top. |
 | `WIN_Z` | (5, 12) | Rear window for the DIN cable, in the no-slot top. |
 
 Sides are named as on a real drive: **front** = bezel end, **rear** = the old DIN end, **left** = the side that held
 the Pi 3B's ports and buttons, **right** = the opposite side.
 
+### Fitting the nubs (rev 4)
+
+Each nub's cup is open on one side, and that opening must face the **case floor**. The board's mounting posts are in
+the top, so the top goes upside down on the bench: the slots then look up at you and the board drops straight in,
+each switch plunger sliding sideways into its cup. The channel sits between y 27.16 and 28.55 and the switch body
+face is at y 26.81, so the black plunger needs to stand **0.35 to 1.74 mm proud of the switch body** to be caught.
+Shorter and it rattles in the cup; longer and it bottoms out and holds the button down.
+
 ## Checks
 
 ```
+python tools\validate_nub_slot.py # rev-4 side-entry nubs: board drops straight down onto them
 python tools\validate_rot2.py     # rev-2 rotated: raise, nub holes, ports, vents, tunnel, assembly path
 python tools\validate_rot.py      # rotated: fit, clashes, openings
 python tools\validate.py          # first layout
 ```
+
+`validate_nub_slot.py` sweeps both the plunger and the 6.4 mm switch body in sideways from the open side and checks
+that neither touches the nub, that the collar still spans the 4.2 mm wall hole, and that the lips either side of the
+channel still hold the plunger in.
 
 They confirm the top and bottom still mate exactly as the originals did (1.03 mm³ of contact), that nothing sticks
 out past the original shell, that no case material sits in the board's space, that every opening goes through, and

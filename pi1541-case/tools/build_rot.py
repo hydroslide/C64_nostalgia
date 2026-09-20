@@ -1,4 +1,9 @@
-﻿"""Rotated variant, rev 2 (after the first test print).
+﻿"""Rotated variant, rev 4 (nubs; the shell is unchanged since rev 2).
+
+rev 4, after the second test print: the button nubs get a SIDE-ENTRY cup, so the board no longer has to be wiggled
+sideways onto them -- see the nub section near the bottom of this file. Nothing about the top or bottom changed.
+
+rev 2 (after the first test print).
 
 Pi Zero turned 180 deg about Z, non-SD end at the REAR (-X, old DIN end), ports/buttons on the RIGHT side (+Y).
 Changes from rev 1, all from print feedback:
@@ -163,10 +168,29 @@ top_noslot = D(D(top, grooves), rear_win)
 # ================================================================ button nubs (pushed in from the inside)
 # inner end: a shallow cup that caps the switch's black plunger; then a constant collar that can't pass the hole;
 # then a plain cylindrical stem with a flat top and rounded-off edges. Only the stem length varies.
+#
+# rev 4: the cup is SIDE-ENTRY. It used to be a closed bore, so the plunger had to go in end-on and the board had to
+# be wiggled sideways onto the nubs. Now one side of the cup is open over its whole length, so the board drops
+# straight down into the top and each plunger slides into its cup sideways. The opening has two widths, because two
+# things have to pass: the plunger (3.5 dia) along the bore, and the switch BODY (6.4 square) across the cup mouth --
+# the mouth reaches SWITCH_OVERLAP past the body's front face, so a plunger-width slot alone would still foul it.
+# The open side must face the CASE FLOOR: the board's posts are in the top, so you assemble with the top upside down,
+# and then the slots look up at you and the board drops straight in.
 WALL_Y = 1.51
 COLLAR_L, BORE_R, BORE_DEEP, LEAD_IN = 3.0, 1.9, 2.5, 0.4     # cup swallows plunger reach of ~2.0..4.3 mm past the board edge
 TIP_R = 0.8                                                    # radius of the rounded-off top edge
 NUB_STEMS = {"short": WALL_Y + 1.0, "medium": WALL_Y + 2.0, "long": WALL_Y + 3.0}
+
+# --- side-entry slot ---------------------------------------------------------------------------------------------
+WALL_IN_Y, SW_FACE_Y = 29.05, 26.81            # right wall inner face, and the switch body's front face (see dbg_sw.py)
+SWITCH_W, PLUNGER_D = 6.4, 3.5                 # switch body across the flats; black plunger diameter
+SLOT_W = PLUNGER_D + 0.4                       # 3.9 -- plunger channel; hugs the plunger, so the nub cannot spin in its hole
+SWITCH_OVERLAP = COLLAR_L - (WALL_IN_Y - SW_FACE_Y)            # 0.76 -- how far the cup mouth reaches past the body face
+MOUTH_RELIEF = SWITCH_OVERLAP + 0.35           # 1.11 -- the cup's first 1.11 mm is cut away ALL ROUND, not just on the
+                                               #         open side: the 6.4 mm switch body is as wide as the 6.5 mm
+                                               #         flange, so the back rim of the cup fouls it too.
+CUP_MOUTH_Y = WALL_IN_Y - COLLAR_L + MOUTH_RELIEF              # 27.16 -- where the plunger channel starts, in world y
+BORE_FLOOR_Y = WALL_IN_Y - COLLAR_L + BORE_DEEP                # 28.55 -- the far end the plunger must not bottom out on
 
 
 def nub(stem_len):
@@ -181,11 +205,26 @@ def nub(stem_len):
     body.append(t)
     body.append(trimesh.creation.cylinder(radius=NUB_STEM_R - TIP_R, height=TIP_R + 0.1, sections=64,
                                           transform=trimesh.transformations.translation_matrix([0, 0, tipz - (TIP_R + 0.1) / 2])))
-    bore = [trimesh.creation.cylinder(radius=BORE_R, height=BORE_DEEP + 0.2, sections=64,
-                                      transform=trimesh.transformations.translation_matrix([0, 0, (BORE_DEEP - 0.2) / 2])),
+    m0, m1 = MOUTH_RELIEF, BORE_DEEP
+    bore = [trimesh.creation.cylinder(radius=BORE_R, height=(m1 - m0) + 0.2, sections=64,
+                                      transform=trimesh.transformations.translation_matrix([0, 0, (m0 + m1 - 0.2) / 2])),
             trimesh.creation.cylinder(radius=BORE_R + 0.25, height=LEAD_IN + 0.2, sections=64,
-                                      transform=trimesh.transformations.translation_matrix([0, 0, (LEAD_IN - 0.2) / 2]))]
+                                      transform=trimesh.transformations.translation_matrix([0, 0, m0 + (LEAD_IN - 0.2) / 2])),
+            # switch-body clearance: the mouth end of the cup taken back all round
+            trimesh.creation.cylinder(radius=NUB_FLANGE_R + 1.0, height=m0 + 0.3, sections=64,
+                                      transform=trimesh.transformations.translation_matrix([0, 0, (m0 - 0.3) / 2])),
+            side_slot()]
     return D(U(body), U(bore))
+
+
+def side_slot():
+    """Opens one side of the cup so the plunger enters sideways instead of end-on.
+    A SLOT_W-wide channel in (y, z), swept out along +x from the axis past the flange, running from the relieved
+    mouth to the bore floor. The back of the cup (x < 0) is untouched, so the collar keeps a C of material and still
+    cannot pass the 4.2 mm wall hole, and the lips left either side stop the plunger dropping back out sideways."""
+    b = SLOT_W / 2
+    prof = Polygon([(-b, MOUTH_RELIEF - 0.05), (b, MOUTH_RELIEF - 0.05), (b, BORE_DEEP), (-b, BORE_DEEP)])
+    return prism_x(prof, 0.0, NUB_FLANGE_R + 1.5)
 
 
 nubs = {}
@@ -194,6 +233,15 @@ for tag, sl in NUB_STEMS.items():
     nubs[f"button_nub_{tag}"] = m
     print(f"nub {tag:7s}: total {m.bounds[1][2]:.2f} mm = cup/collar {COLLAR_L} + stem {sl:.2f} "
           f"-> stands {sl - WALL_Y:.1f} mm proud; cup bore {BORE_R * 2:.1f} x {BORE_DEEP} deep")
+
+print()
+print(f"side-entry cup: {SLOT_W} mm channel open on one side, mouth cut back {MOUTH_RELIEF:.2f} mm all round so "
+      f"the {SWITCH_W} mm switch body clears (it overlapped the old cup mouth by {SWITCH_OVERLAP:.2f} mm).")
+print(f"  plunger channel runs y {CUP_MOUTH_Y:.2f}..{BORE_FLOOR_Y:.2f}; the switch body face is at y {SW_FACE_Y}, "
+      f"so the black plunger must stand {CUP_MOUTH_Y - SW_FACE_Y:.2f}..{BORE_FLOOR_Y - SW_FACE_Y:.2f} mm proud of "
+      f"the body to be caught (shorter = loose in the cup, longer = holds the button down).")
+print("  >> fit each nub with its open side facing the CASE FLOOR: with the top upside down on the bench the "
+      "slots look up at you, and the board drops straight in.")
 
 print(f"\nboard raised {RAISE} mm, moved {BACKOFF} mm off the right wall; tunnel depth {16.0 - (26.0 + DZ):.1f} mm; "
       f"button axis z={BTN_Z:.2f}; rear window z {WIN_Z}")

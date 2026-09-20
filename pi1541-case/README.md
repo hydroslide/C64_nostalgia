@@ -10,7 +10,9 @@ Zero:
 - **`real_files/target/`** — the "PI1541 Zero Case", used as the donor for
   Pi Zero board geometry (mounting posts, port/button cutouts).
 - **`output/`** — print-ready STLs: the converted case (bottom/top, in slotted
-  and non-slotted variants) plus bezel and button-nub parts.
+  and non-slotted variants) plus bezel and button-nub parts. The nubs have a
+  side-entry cup, so the board drops straight into the top rather than having to
+  be wiggled onto the switches; fit them with the open side facing the case floor.
 - **`tools/`** — the Python build pipeline that does the conversion (fills the
   Pi 3B's holes, cuts the Zero's holes, transfers mounting posts). See
   [`tools/README.md`](tools/README.md) for the full workflow.
