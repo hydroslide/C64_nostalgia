@@ -36,7 +36,7 @@
   "disk_id": "01",
   "items": [
    {
-    "todo": "not in the local cache",
+    "todo": "no C64 release found anywhere - the arcade game was never ported to the 64; the label may mean a clone",
     "title": "Time Pilot"
    },
    {
@@ -106,7 +106,11 @@
     "blocks": 70
    },
    {
-    "todo": "not in the local cache - the JUNGLE file found is on an unrelated disk",
+    "note": "fetched from the Internet Archive's C64 library (Atari, 1984)",
+    "src": "downloads\\Jungle_Hunt_1984_Atari__Jungle_Hunt_1984_Atari.d64",
+    "member": null,
+    "file": "JUNGLE HUNT",
+    "blocks": 65,
     "title": "Jungle Hunt"
    },
    {
@@ -139,11 +143,14 @@
     "blocks": 133
    },
    {
-    "title": "B.C.'s Quest for Tires",
-    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\abc\\ai100-3d\\bc's quest ii.prg",
-    "member": null,
-    "file": "BC'S QUEST II",
-    "blocks": 152
+    "note": "the single-file hit named \"BC'S QUEST II\" turned out on screen to be B.C. II: Grog's Revenge",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\b\\bcs_quest_for_tires[sierra_1983](!).zip",
+     "member": "bcs_quest_for_tires[sierra_1983](!).g64",
+     "disk_name": "(C) 1983 SOL INC",
+     "kind": "g64"
+    },
+    "title": "B.C.'s Quest for Tires"
    }
   ]
  },
@@ -250,7 +257,11 @@
     "title": "Ghost Manor"
    },
    {
-    "todo": "only copier parameters; the two 'HERO' files are Hero Quest and a Little Hero preview",
+    "note": "fetched from the Internet Archive - the Spanish Load 'n' Run release; same game, Spanish title screen",
+    "src": "downloads\\H.E.R.O._El_Heroe_1984_Activision_es_h_Load_n_Run__H.E.R.O._El_Heroe_1984_Activision_es_h_Load_n_Run.d64",
+    "member": null,
+    "file": "EL HEROE",
+    "blocks": 66,
     "title": "H.E.R.O."
    },
    {
@@ -439,7 +450,13 @@
   "disk_id": "10",
   "items": [
    {
-    "todo": "not in the local cache - only a Kracker Jax parameter by that name",
+    "note": "fetched from the Internet Archive; multi-file, so the whole side goes on",
+    "whole_image": {
+     "src": "downloads\\d64_SubLogic_Football_1986_Sublogic__SubLogic_Football_1986_Sublogic.d64",
+     "member": null,
+     "disk_name": "ASS PRESENTS:",
+     "kind": "disk"
+    },
     "title": "Sublogic Football"
    },
    {
@@ -562,7 +579,13 @@
   "disk_id": "15",
   "items": [
    {
-    "todo": "not in the local cache",
+    "note": "fetched from the Internet Archive (Spinnaker, 1983); multi-file, so the whole side goes on",
+    "whole_image": {
+     "src": "downloads\\Hey_Diddle_Diddle_1983_Spinnaker_Software__Hey_Diddle_Diddle_1983_Spinnaker_Software.d64",
+     "member": null,
+     "disk_name": "ASS PRESENTS:",
+     "kind": "disk"
+    },
     "title": "Hey Diddle Diddle"
    }
   ]
@@ -573,7 +596,7 @@
   "disk_id": "16",
   "items": [
    {
-    "todo": "UNCONFIRMED - the only hit is a four-disk game by Zinta, unlikely to be the arcade Caveman",
+    "todo": "still not found - the archive's 'Caveman' is a 1990 Compute! type-in and 'Crazy Caveman' does not look like the arcade game",
     "title": "Caveman"
    },
    {
@@ -594,15 +617,22 @@
     "title": "Pitfall!"
    },
    {
-    "todo": "not in the local cache - the JUNGLE file found is on an unrelated disk",
+    "note": "fetched from the Internet Archive's C64 library (Atari, 1984)",
+    "src": "downloads\\Jungle_Hunt_1984_Atari__Jungle_Hunt_1984_Atari.d64",
+    "member": null,
+    "file": "JUNGLE HUNT",
+    "blocks": 65,
     "title": "Jungle Hunt"
    },
    {
-    "title": "B.C.'s Quest for Tires",
-    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\abc\\ai100-3d\\bc's quest ii.prg",
-    "member": null,
-    "file": "BC'S QUEST II",
-    "blocks": 152
+    "note": "the single-file hit named \"BC'S QUEST II\" turned out on screen to be B.C. II: Grog's Revenge",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\b\\bcs_quest_for_tires[sierra_1983](!).zip",
+     "member": "bcs_quest_for_tires[sierra_1983](!).g64",
+     "disk_name": "(C) 1983 SOL INC",
+     "kind": "g64"
+    },
+    "title": "B.C.'s Quest for Tires"
    },
    {
     "title": "Popeye",
@@ -766,7 +796,11 @@
   "disk_id": "20",
   "items": [
    {
-    "todo": "not in the local cache",
+    "note": "fetched from the Internet Archive (Alligata, 1983)",
+    "src": "downloads\\Haunted_House_1983_Alligata_Software__Haunted_House_1983_Alligata_Software.d64",
+    "member": null,
+    "file": "HAUNTED HOUSE",
+    "blocks": 79,
     "title": "Haunted House"
    }
   ]
@@ -777,11 +811,13 @@
   "disk_id": "20",
   "items": [
    {
-    "note": "it is one story on Scholastic's Tales of Mystery disk",
-    "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\t\\tales_of_mystery_s2[scholastic_1984].zip",
-    "member": "tales_of_mystery_s2[scholastic_1984].g64",
-    "file": "PINECREST MANOR",
-    "blocks": 70,
+    "note": "PINECREST MANOR on its own is a story file, not a program - it needs Scholastic's Tales of Mystery engine, so the whole side goes on",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\t\\tales_of_mystery_s2[scholastic_1984].zip",
+     "member": "tales_of_mystery_s2[scholastic_1984].g64",
+     "disk_name": "??????EST MANOR",
+     "kind": "g64"
+    },
     "title": "Mystery at Pinecrest Manor"
    }
   ]
@@ -919,8 +955,11 @@
   "disk_id": "25",
   "items": [
    {
-    "start": "sys 16384",
-    "todo": "not in the local cache - the match was Batman",
+    "note": "fetched from the Internet Archive (Aardvark, 1984) - the label says SYS 16384, which the build works out from the file itself",
+    "src": "downloads\\Bagitman_1984_Aardvark_Software__Bagitman_1984_Aardvark_Software.d64",
+    "member": null,
+    "file": "BAGITMAN",
+    "blocks": 57,
     "title": "Bagitman"
    },
    {
@@ -944,11 +983,19 @@
     "title": "Genesis"
    },
    {
-    "todo": "not in the local cache",
+    "note": "fetched from the Internet Archive (Mr. Computer, 1983)",
+    "src": "downloads\\d64_Marios_Brewery_1983_Mr._Computer__Marios_Brewery_1983_Mr._Computer.d64",
+    "member": null,
+    "file": "MARIO'S BREWERY",
+    "blocks": 11,
     "title": "Mario's Brewery"
    },
    {
-    "todo": "not in the local cache",
+    "note": "fetched from the Internet Archive (Ocean, 1984)",
+    "src": "downloads\\d64_Mr._Wimpy_The_Hamburger_Game_1984_Ocean_h_ASS__Mr._Wimpy_The_Hamburger_Game_1984_Ocean_h_ASS.d64",
+    "member": null,
+    "file": "MR. WIMPY",
+    "blocks": 41,
     "title": "Mr. Wimpy"
    }
   ]
@@ -975,7 +1022,11 @@
     }
    },
    {
-    "todo": "not in the local cache",
+    "note": "fetched from the Internet Archive (Interceptor Micros, 1984)",
+    "src": "downloads\\Bigtop_Barney_1984_Interceptor_Micros__Bigtop_Barney_1984_Interceptor_Micros.d64",
+    "member": null,
+    "file": "BIGTOP BARNEY",
+    "blocks": 180,
     "title": "Big Top Barney"
    }
   ]
@@ -1002,7 +1053,13 @@
     }
    },
    {
-    "todo": "not in the local cache",
+    "note": "fetched from the Internet Archive (Creative Sparks, 1984); loads in two parts, so the whole side goes on",
+    "whole_image": {
+     "src": "downloads\\Danger_Mouse_in_the_Black_Forest_Chateau_1984_Creative_Sparks_cr_CMM__Danger_Mouse_in_the_Black_Forest_Chateau_1984_Creative_Sparks_cr_CMM.d64",
+     "member": null,
+     "disk_name": "ASS PRESENTS:",
+     "kind": "disk"
+    },
     "title": "Danger Mouse in the Black Forest Chateau"
    }
   ]
@@ -1022,7 +1079,11 @@
     }
    },
    {
-    "todo": "label never identified; no C64 game by this name",
+    "note": "SUBSTITUTE - no C64 game is called Rad Skater; Skate or Die (EA, 1987) is the likeliest thing the label meant",
+    "src": "downloads\\Skate_or_Die_1987_Electronic_Arts__Skate_or_Die_1987_Electronic_Arts.d64",
+    "member": null,
+    "file": "SKATE OR ACE/GCF",
+    "blocks": 106,
     "title": "Rad Skater"
    }
   ]
@@ -1106,11 +1167,14 @@
   "disk_id": "31",
   "items": [
    {
-    "title": "Dino Eggs",
-    "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\d\\dino_eggs[micro_fun_1984](ntsc)(!).zip",
-    "member": "dino_eggs[micro_fun_1984](ntsc)(!).g64",
-    "file": "DINO EGGS",
-    "blocks": 125
+    "note": "the file on the disk loads at $0400, over screen memory - it is a loader stage, not the game",
+    "whole_image": {
+     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\d\\dino_eggs[micro_fun_1984](ntsc)(!).zip",
+     "member": "dino_eggs[micro_fun_1984](ntsc)(!).g64",
+     "disk_name": "DINO EGGS",
+     "kind": "g64"
+    },
+    "title": "Dino Eggs"
    },
    {
     "title": "Donkey Kong",
@@ -1127,7 +1191,13 @@
   "disk_id": "31",
   "items": [
    {
-    "todo": "not in the local cache - only a Kracker Jax parameter by that name",
+    "note": "fetched from the Internet Archive; multi-file, so the whole side goes on",
+    "whole_image": {
+     "src": "downloads\\d64_SubLogic_Football_1986_Sublogic__SubLogic_Football_1986_Sublogic.d64",
+     "member": null,
+     "disk_name": "ASS PRESENTS:",
+     "kind": "disk"
+    },
     "title": "Sublogic Football"
    }
   ]
@@ -1209,7 +1279,11 @@
   "disk_id": "35",
   "items": [
    {
-    "todo": "not in the local cache",
+    "note": "fetched from the Internet Archive - the Spanish Load 'n' Run release of the Parker Brothers game",
+    "src": "downloads\\Gyruss_Planeta_Alienigena_1984_Parker_Brothers_es_h_Load_n_Run__Gyruss_Planeta_Alienigena_1984_Parker_Brothers_es_h_Load_n_Run.d64",
+    "member": null,
+    "file": "PLANETA ALIENIG.",
+    "blocks": 127,
     "title": "Gyruss"
    }
   ]
@@ -1234,7 +1308,13 @@
   "disk_id": "36",
   "items": [
    {
-    "todo": "not in the local cache - the GAME file found was from Colonial Trader",
+    "note": "fetched from the Internet Archive (Advanced Ideas, 1984); multi-file, so the whole side goes on",
+    "whole_image": {
+     "src": "downloads\\Game_Show_The_1984_Advanced_Ideas__Game_Show_The_1984_Advanced_Ideas.d64",
+     "member": null,
+     "disk_name": "GS",
+     "kind": "disk"
+    },
     "title": "The Game Show"
    }
   ]

@@ -1,6 +1,6 @@
 # Harvest report
 
-Found candidates for 112 of 120 titles.
+Found candidates for 117 of 120 titles.
 
 Top candidates per title. **M** = multi-load game (copy a whole image, not one file).
 Single files first, then whole images.
@@ -53,9 +53,9 @@ Single files first, then whole images.
     - file 0.95  `WORLDGAMES8` (91 blk) on "" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\triad\ai200-mw4\world1.d64
     - file 0.95  `WORLDGAMES7` (88 blk) on "" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\triad\ai200-mw4\world1.d64
     - disk 1.00  [g64] "WORLD GAMES SD1" (2 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\w\world_games_s1[epyx_1986](ntsc)(!).zip :: world_games_s1[epyx_1986](ntsc)(!).g64
+    - disk 1.00  [g64] "WORLD GAMES SD2" (0 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\w\world_games_s2[epyx_1986](ntsc)(!).zip :: world_games_s2[epyx_1986](ntsc)(!).g64
     - disk 1.00  [g64] "MICHAEL CRICK(C)" (37 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\w\world_games[cosmi_1986].zip :: world_games[cosmi_1986].g64
     - disk 1.00  [g64] "WORLD GAMES" (13 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\w\world_games_s1[epyx_1986](pal).zip :: world_games_s1[epyx_1986](pal).g64
-    - disk 1.00  [g64] "WORLD GAMES SD1" (2 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\w\world_games_s1[epyx_1986](alt).zip :: world_games_s1[epyx_1986](alt).g64
 
 ## D03-1 - Action Biker
 - **Action Biker**
@@ -84,11 +84,12 @@ Single files first, then whole images.
     - disk 1.00  [g64] "CC" (3 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\d\decathlon[activision_1984](!).zip :: decathlon[activision_1984](!).g64
     - disk 0.80  [disk] "" (3 files) - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\success\ai100-1st\decton.d64
 - **Jungle Hunt**
+    - file 1.00  `JUNGLE HUNT` (65 blk) on "TESTDISK" - downloads\Jungle_Hunt_1984_Atari__Jungle_Hunt_1984_Atari.d64
     - file 0.90  `JUNGLE` (55 blk) on "DUCKTALES" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\hotline\ai200-dnought\duck_c.d64
     - file 0.90  `JUNGLE` (55 blk) on "DUCKTALES" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\north_east_crack\ai100-1943\duck_c.d64
     - file 0.90  `JUNGLE` (55 blk) on "DUCKTALES" - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\d\duck_tales_s3[disney_1990].zip :: duck_tales_s3[disney_1990].g64
     - file 0.90  `JUNGLE` (17 blk) on "ARACHNOPHOBIA" - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\a\arachnophobia_s2[disney_1991](manual).zip :: arachnophobia_s2[disney_1991](manual).g64
-    - file 0.90  `JUNGLE` (7 blk) on "OIL BARONS" _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\k\oil_barons_s2[epyx_1984].zip :: oil_barons_s2[epyx_1984].d64
+    - disk 0.90  [disk] "TESTDISK" (1 files) - downloads\Jungle_Hunt_1984_Atari__Jungle_Hunt_1984_Atari.d64
 - **Moon Patrol**
     - file 1.00  `MOON PATROL` (66 blk) on "NNNNNNNNNNNNNNNN" - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\t\tomahawk[digital_integration_1986](alt).zip :: tomahawk[digital_integration_1986](alt).g64
 - **Mr. Robot and His Robot Factory**
@@ -253,8 +254,8 @@ Single files first, then whole images.
     - file 0.86  `SGAMES` (1 blk) on "(C) 321-SOFTWARE" _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\s\s-games[321_software_1984].zip :: s-games[321_software_1984].g64
     - disk 1.00  [g64] "(C) HESWARE 84" (33 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\h\hes_games[hesware_1984](!).zip :: hes_games[hesware_1984](!).g64
     - disk 1.00  [g64] "(C) 1984 HES" (38 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\h\hes_games[hesware_1984].zip :: hes_games[hesware_1984].g64
-    - disk 0.89  [g64] "CHESS GAMES" (4 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\s\sargon_iii_s3_games[hayden_1984].zip :: sargon_iii_s3_games[hayden_1984].g64
-    - disk 0.86  [g64] "(C) 321-SOFTWARE" (39 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\s\s-games[321_software_1984].zip :: s-games[321_software_1984].g64
+    - disk 0.89  [g64] "CHESS GAMES" (0 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\c\chessmaster_2000_s2[software_toolworks_1986](!).zip :: chessmaster_2000_s2[software_toolworks_1986](!).g64
+    - disk 0.89  [g64] "CHESS GAMES" (0 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\c\chessmaster_2000_s2[ea_1986](pal).zip :: chessmaster_2000_s2[ea_1986](pal).g64
 
 ## D08-2 - Summer Games
 - **Summer Games** **M**
@@ -325,9 +326,11 @@ Single files first, then whole images.
 
 ## D10-2 - Sublogic Football, Mac Music
 - **Sublogic Football**
+    - file 0.96  `SUBLOGIC FOOTB.` (172 blk) on "ASS PRESENTS:" - downloads\d64_SubLogic_Football_1986_Sublogic__SubLogic_Football_1986_Sublogic.d64
     - file 0.90  `SUBLOGIC FOO` (3 blk) on "KRACKER JAX" _(parameter disk)_ _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\k\kracker_jax_vol3[kjpb_1986].zip :: kracker_jax_vol3[kjpb_1986].g64
     - file 0.90  `SUBLOGIC FOO` (2 blk) on "KRACKER JAX" _(parameter disk)_ _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\k\kracker_jax_vol6[kjpb_1987].zip :: kracker_jax_vol6[kjpb_1987].g64
     - file 0.80  `SUBLOGIC BAS` (3 blk) on "KRACKER JAX" _(parameter disk)_ _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\k\kracker_jax_vol4[kjpb_1986].zip :: kracker_jax_vol4[kjpb_1986].g64
+    - disk 0.85  [disk] "ASS PRESENTS:" (6 files) - downloads\d64_SubLogic_Football_1986_Sublogic__SubLogic_Football_1986_Sublogic.d64
 - **Mac Music**: _no candidates_
 
 ## D11-1 - Fist the Ledgend Continues
@@ -362,9 +365,9 @@ Single files first, then whole images.
     - file 0.82  `DBL.DARE+7FX/EMP` (147 blk) on "DIGITAL DUNGEON" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\empire\ai100-12\dbldare.d64
     - file 0.82  `DBL.DARE+7FX/EMP` (147 blk) on "DIGITAL DUNGEON" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\the_ruling_compa\ai100-\dbldare.d64
     - disk 1.00  [g64] "DOUBLE DARE" (1 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\d\double_dare_s1[gametek_1988](!).zip :: double_dare_s1[gametek_1988](!).g64
+    - disk 1.00  [g64] "DD STUNTS" (0 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\d\double_dare_s2[gametek_1988](!).zip :: double_dare_s2[gametek_1988](!).g64
+    - disk 1.00  [g64] "DD STUNTS" (0 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\d\double_dare_s2[gametek_1988](alt1)(!).zip :: double_dare_s2[gametek_1988](alt1)(!).g64
     - disk 0.91  [disk] "GAMES COLLECTION" (6 files) - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\the_ruling_compa\ai100-\double dare - tr.d64
-    - disk 0.82  [disk] "DIGITAL DUNGEON" (4 files) - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\empire\ai100-12\dbldare.d64
-    - disk 0.82  [disk] "DIGITAL DUNGEON" (4 files) - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\the_ruling_compa\ai100-\dbldare.d64
 
 ## D13-1 - Double Dragon
 - **Double Dragon** **M**
@@ -410,7 +413,11 @@ Single files first, then whole images.
     - disk 1.00  [g64] "STORYMAKER DISK" (5 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\k\kermits_electronic_storymaker[simon-schuster_1984](alt).zip :: kermits_electronic_storymaker[simon-schuster_1984](alt).g64
 
 ## D15-2 - Hey Diddle Diddle
-- **Hey Diddle Diddle**: _no candidates_
+- **Hey Diddle Diddle**
+    - file 0.81  `HEY DIDDLE D.DOX` (14 blk) on "ASS PRESENTS:" - downloads\Hey_Diddle_Diddle_1983_Spinnaker_Software__Hey_Diddle_Diddle_1983_Spinnaker_Software.d64
+    - file 0.80  `T.HEY DIDDLE D.` (27 blk) on "ASS PRESENTS:" - downloads\Hey_Diddle_Diddle_1983_Spinnaker_Software__Hey_Diddle_Diddle_1983_Spinnaker_Software.d64
+    - file 0.96  `HEY DIDDLE DIDD.` (1 blk) on "ASS PRESENTS:" _(too small)_ - downloads\Hey_Diddle_Diddle_1983_Spinnaker_Software__Hey_Diddle_Diddle_1983_Spinnaker_Software.d64
+    - disk 0.90  [disk] "ASS PRESENTS:" (67 files) - downloads\Hey_Diddle_Diddle_1983_Spinnaker_Software__Hey_Diddle_Diddle_1983_Spinnaker_Software.d64
 
 ## D16-1 - Caveman, Cohn's Towers, Pittfall, Jungle Hunt, Quest for Tires, Popeye, Mr. Robot  (menu disk)
 - **Caveman**
@@ -435,11 +442,12 @@ Single files first, then whole images.
     - disk 1.00  [g64] "CC" (3 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\p\pitfall[activision_1984](!).zip :: pitfall[activision_1984](!).g64
     - disk 0.90  [g64] "CC" (3 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\p\pitfall_ii[activision_1984](!).zip :: pitfall_ii[activision_1984](!).g64
 - **Jungle Hunt**
+    - file 1.00  `JUNGLE HUNT` (65 blk) on "TESTDISK" - downloads\Jungle_Hunt_1984_Atari__Jungle_Hunt_1984_Atari.d64
     - file 0.90  `JUNGLE` (55 blk) on "DUCKTALES" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\hotline\ai200-dnought\duck_c.d64
     - file 0.90  `JUNGLE` (55 blk) on "DUCKTALES" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\north_east_crack\ai100-1943\duck_c.d64
     - file 0.90  `JUNGLE` (55 blk) on "DUCKTALES" - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\d\duck_tales_s3[disney_1990].zip :: duck_tales_s3[disney_1990].g64
     - file 0.90  `JUNGLE` (17 blk) on "ARACHNOPHOBIA" - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\a\arachnophobia_s2[disney_1991](manual).zip :: arachnophobia_s2[disney_1991](manual).g64
-    - file 0.90  `JUNGLE` (7 blk) on "OIL BARONS" _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\k\oil_barons_s2[epyx_1984].zip :: oil_barons_s2[epyx_1984].d64
+    - disk 0.90  [disk] "TESTDISK" (1 files) - downloads\Jungle_Hunt_1984_Atari__Jungle_Hunt_1984_Atari.d64
 - **B.C.'s Quest for Tires**
     - file 0.90  `BC'S QUEST II` (152 blk) on "" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\abc\ai100-3d\bc's quest ii.prg
     - file 0.83  `QUEST` (13 blk) on "-TLB OF MANOWAR-" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\manowar\dragons_of_flame.d64
@@ -579,7 +587,9 @@ Single files first, then whole images.
     - disk 1.00  [g64] "STARWARS" (4 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\s\star_wars[domark_1988](ntsc).zip :: star_wars[domark_1988](ntsc).g64
 
 ## D20-1 - Haunted House
-- **Haunted House**: _no candidates_
+- **Haunted House**
+    - file 1.00  `HAUNTED HOUSE` (79 blk) on "" - downloads\Haunted_House_1983_Alligata_Software__Haunted_House_1983_Alligata_Software.d64
+    - disk 0.90  [disk] "" (1 files) - downloads\Haunted_House_1983_Alligata_Software__Haunted_House_1983_Alligata_Software.d64
 
 ## D20-2 - Mystery at Pincrest Manor
 - **Mystery at Pinecrest Manor** **M**
@@ -665,9 +675,9 @@ Single files first, then whole images.
 - **Adventure Construction Set** **M**
     - file 0.83  `ADVENTURES/C` (3 blk) on "KRACKER JAX" _(parameter disk)_ _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\k\kracker_jax_vol3[kjpb_1986].zip :: kracker_jax_vol3[kjpb_1986].g64
     - disk 1.00  [g64] "??LOAD"EA",8,1?" (17 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\a\adventure_construction_set_s1[ea_1984](!).zip :: adventure_construction_set_s1[ea_1984](!).g64
+    - disk 1.00  [g64] "A.C.S-SIDE 2" (0 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\a\adventure_construction_set_s2[ea_1984](!).zip :: adventure_construction_set_s2[ea_1984](!).g64
     - disk 0.83  [g64] "ADVENTURES" (16 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\m\murder_on_the_mississippi[activision_1986](!).zip :: murder_on_the_mississippi[activision_1986](!).g64
     - disk 0.83  [g64] "ADVENTURES" (17 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\m\murder_on_the_mississippi[activision_1986](alt3).zip :: murder_on_the_mississippi[activision_1986](alt3).g64
-    - disk 0.83  [g64] "ADVENTURES" (16 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\m\murder_on_the_mississippi[activision_1986](alt1).zip :: murder_on_the_mississippi[activision_1986](alt1).g64
 
 ## D25-1 - Centropods & much more
 - **Centropods**
@@ -676,15 +686,15 @@ Single files first, then whole images.
 
 ## D25-2 - Bagitman (SYS 16384), Up'n Down, Genesis, Marios Brewery, Mr Wimpy
 - **Bagitman**
+    - file 1.00  `BAGITMAN` (57 blk) on "AREA64" - downloads\Bagitman_1984_Aardvark_Software__Bagitman_1984_Aardvark_Software.d64
     - file 0.86  `BATMAN +5....SCS` (28 blk) on "" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\success\ai100-1st\batman.d64
     - file 0.86  `BATMAN+4/TAL/INC` (148 blk) on "<=-?????? ??-=> " - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\international_ne\batman the movie.d64
     - file 0.86  `BATMAN+4/TAL/INC` (148 blk) on "<=-?????? ??-=> " - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\talent\batman the movie.d64
     - file 0.86  `BATMAN` (202 blk) on "" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\ikari\ai100-1943\batman.prg
-    - file 0.86  `BATMAN` (202 blk) on "" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\rampar\batman.prg
+    - disk 0.90  [disk] "AREA64" (1 files) - downloads\Bagitman_1984_Aardvark_Software__Bagitman_1984_Aardvark_Software.d64
     - disk 0.86  [disk] "" (5 files) - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\success\ai100-1st\batman.d64
     - disk 0.86  [g64] "BATMAN" (6 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\b\batman[data_east_1988](ntsc)(!).zip :: batman[data_east_1988](ntsc)(!).g64
     - disk 0.86  [g64] ""???? ?"0:*",8,1" (5 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\b\batman[ocean_1988](pal)(!).zip :: batman[ocean_1988](pal)(!).g64
-    - disk 0.86  [g64] ""???? ?"0:*",8,1" (5 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\b\batman[ocean_1988](pal)(alt1)(!).zip :: batman[ocean_1988](pal)(alt1)(!).g64
 - **Up'n Down**
     - file 0.83  `U.DOWN+4FIX/F4CG` (158 blk) on "DIGITAL DUNGEON " - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\f4cg\ai200-logan\upside_down.d64
     - file 0.83  `UPDWN` (3 blk) on "DGW 112684 YB" _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\d\dragonworld_s2[telarium_1984](02)(alt).zip :: dragonworld_s2[telarium_1984](02)(alt).g64
@@ -700,8 +710,12 @@ Single files first, then whole images.
     - disk 1.00  [g64] "????????????????" (8 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\g\genesis[datasoft_1983](!).zip :: genesis[datasoft_1983](!).g64
     - disk 0.85  [disk] "EXODUS & GENESIS" (31 files) - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\exodus\0259a.d64
     - disk 0.85  [disk] "EXODUS & GENESIS" (31 files) - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\genesis_project\0259a.d64
-- **Mario's Brewery**: _no candidates_
-- **Mr. Wimpy**: _no candidates_
+- **Mario's Brewery**
+    - file 1.00  `MARIO'S BREWERY` (11 blk) on "" _(too small)_ - downloads\d64_Marios_Brewery_1983_Mr._Computer__Marios_Brewery_1983_Mr._Computer.d64
+    - disk 0.85  [disk] "" (1 files) - downloads\d64_Marios_Brewery_1983_Mr._Computer__Marios_Brewery_1983_Mr._Computer.d64
+- **Mr. Wimpy**
+    - file 1.00  `MR. WIMPY` (41 blk) on "" - downloads\d64_Mr._Wimpy_The_Hamburger_Game_1984_Ocean_h_ASS__Mr._Wimpy_The_Hamburger_Game_1984_Ocean_h_ASS.d64
+    - disk 0.85  [disk] "" (1 files) - downloads\d64_Mr._Wimpy_The_Hamburger_Game_1984_Ocean_h_ASS__Mr._Wimpy_The_Hamburger_Game_1984_Ocean_h_ASS.d64
 
 ## D26-1 - Mister Do, Wargames, Big Top Barney
 - **Mr. Do!**
@@ -719,7 +733,11 @@ Single files first, then whole images.
     - disk 1.00  [g64] "WARGAMES 64" (5 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\w\wargames[coleco_1984](!).zip :: wargames[coleco_1984](!).g64
     - disk 1.00  [g64] "KEYPUNCH" (11 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\w\war_games[keypunch_198x].zip :: war_games[keypunch_198x].g64
     - disk 0.90  [g64] "????????????????" (3 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\w\war_games_auto_dialer[megasoft_1984].zip :: war_games_auto_dialer[megasoft_1984].g64
-- **Big Top Barney**: _no candidates_
+- **Big Top Barney**
+    - file 1.00  `BIGTOP BARNEY` (180 blk) on "" - downloads\Bigtop_Barney_1984_Interceptor_Micros__Bigtop_Barney_1984_Interceptor_Micros.d64
+    - file 1.00  `BIG TOP BARNEY` (2 blk) on "SCOTT" _(too small)_ - downloads\Compilation_Inside_Outing_Dan_Dare_Big_Top_Barney_19xx_-__Compilation_Inside_Outing_Dan_Dare_Big_Top_Barney_19xx_-.d64
+    - disk 0.90  [disk] "" (1 files) - downloads\Bigtop_Barney_1984_Interceptor_Micros__Bigtop_Barney_1984_Interceptor_Micros.d64
+    - disk 0.85  [disk] "SCOTT" (6 files) - downloads\Compilation_Inside_Outing_Dan_Dare_Big_Top_Barney_19xx_-__Compilation_Inside_Outing_Dan_Dare_Big_Top_Barney_19xx_-.d64
 
 ## D26-2 - Hacker, Hacker II, Dangermouse II
 - **Hacker**
@@ -743,11 +761,12 @@ Single files first, then whole images.
     - disk 1.00  [g64] "XEMAG 2.0" (7 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\h\hacker_ii[activision_1986](ntsc)(!).zip :: hacker_ii[activision_1986](ntsc)(!).g64
     - disk 1.00  [g64] "XEMAG 2.0" (8 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\h\hacker_ii[activision_1987](german).zip :: hacker_ii[activision_1987](german).g64
 - **Danger Mouse in the Black Forest Chateau**
+    - file 0.92  `DANGER MOUSE P.2` (73 blk) on "ASS PRESENTS:" - downloads\Danger_Mouse_in_the_Black_Forest_Chateau_1984_Creative_Sparks_cr_CMM__Danger_Mouse_in_the_Black_Forest_Chateau_1984_Creative_Sparks_cr_CMM.d64
+    - file 0.92  `DANGER MOUSE P.1` (72 blk) on "ASS PRESENTS:" - downloads\Danger_Mouse_in_the_Black_Forest_Chateau_1984_Creative_Sparks_cr_CMM__Danger_Mouse_in_the_Black_Forest_Chateau_1984_Creative_Sparks_cr_CMM.d64
     - file 0.85  `MENU&MOUSE` (81 blk) on "L?P??MR NIBBLE" - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\m\mr_nibble[full_circle_1984](newer).zip :: mr_nibble[full_circle_1984](newer).g64
     - file 0.91  `MOUSE` (1 blk) on "OPER" _(too small)_ - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\hotline\ai300-micro\omega2.d64
     - file 0.91  `MOUSE` (1 blk) on "OPER" _(too small)_ - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\north_east_crack\ai100-1943\omega2.d64
-    - file 0.91  `MOUSE` (3 blk) on "OFF THE WALL" _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\g\graphics_scrapbook_off_the_wall_s1[epyx_1986].zip :: graphics_scrapbook_off_the_wall_s1[epyx_1986].g64
-    - file 0.91  `MOUSE` (3 blk) on "DATA DISK" _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\p\print_shop_gfx_special_edition_s1[br0derbund].zip :: print_shop_gfx_special_edition_s1[br0derbund].g64
+    - disk 0.90  [disk] "ASS PRESENTS:" (2 files) - downloads\Danger_Mouse_in_the_Black_Forest_Chateau_1984_Creative_Sparks_cr_CMM__Danger_Mouse_in_the_Black_Forest_Chateau_1984_Creative_Sparks_cr_CMM.d64
 
 ## D27-1 - Hattrick, Rad Skater
 - **Hat Trick** **M**
@@ -823,9 +842,11 @@ Single files first, then whole images.
 
 ## D31-2 - Sublogic Football
 - **Sublogic Football**
+    - file 0.96  `SUBLOGIC FOOTB.` (172 blk) on "ASS PRESENTS:" - downloads\d64_SubLogic_Football_1986_Sublogic__SubLogic_Football_1986_Sublogic.d64
     - file 0.90  `SUBLOGIC FOO` (3 blk) on "KRACKER JAX" _(parameter disk)_ _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\k\kracker_jax_vol3[kjpb_1986].zip :: kracker_jax_vol3[kjpb_1986].g64
     - file 0.90  `SUBLOGIC FOO` (2 blk) on "KRACKER JAX" _(parameter disk)_ _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\k\kracker_jax_vol6[kjpb_1987].zip :: kracker_jax_vol6[kjpb_1987].g64
     - file 0.80  `SUBLOGIC BAS` (3 blk) on "KRACKER JAX" _(parameter disk)_ _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\k\kracker_jax_vol4[kjpb_1986].zip :: kracker_jax_vol4[kjpb_1986].g64
+    - disk 0.85  [disk] "ASS PRESENTS:" (6 files) - downloads\d64_SubLogic_Football_1986_Sublogic__SubLogic_Football_1986_Sublogic.d64
 
 ## D32-1 - West Bank, Gauntlet
 - **West Bank**
@@ -870,6 +891,7 @@ Single files first, then whole images.
 ## D35-1 - Gyruss
 - **Gyruss**
     - file 0.80  `RUSS` (26 blk) on "STORM" - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\s\storm_across_europe[ssi_1989].zip :: storm_across_europe[ssi_1989].g64
+    - disk 0.90  [disk] "" (1 files) - downloads\Gyruss_Planeta_Alienigena_1984_Parker_Brothers_es_h_Load_n_Run__Gyruss_Planeta_Alienigena_1984_Parker_Brothers_es_h_Load_n_Run.d64
 
 ## D35-2 - Slapshot
 - **Slap Shot**
@@ -885,10 +907,10 @@ Single files first, then whole images.
     - file 0.90  `GAME` (112 blk) on "SAMPLE.D64" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\excalibur\gp tennis manage.d64
     - file 0.90  `GAME` (112 blk) on "SAMPLE.D64" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\f4cg\ai100-\gp tennis manage.d64
     - file 0.90  `GAME` (83 blk) on "BACKSIDE TV SPTS" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\hotline\ai400-superstar\tv_sports_footba.d64
+    - disk 0.90  [disk] "GS" (28 files) - downloads\Game_Show_The_1984_Advanced_Ideas__Game_Show_The_1984_Advanced_Ideas.d64
     - disk 0.90  [disk] "GAMES" (11 files) - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\eagle_soft_incor\ai100-008\championship_w-1.d64
     - disk 0.90  [disk] "-NO SPREADING!-" (2 files) - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\onslaught\ai100-3\game.d64
     - disk 0.90  [disk] "GAME" (63 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\k\rings_of_zilfin_s2[ssi_1986](alt).zip :: rings_of_zilfin_s2[ssi_1986](alt).d64
-    - disk 0.90  [g64] "GAMES" (37 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\c\corom-twin_kingdom_valley_s1[tri-micro_1984](!).zip :: corom-twin_kingdom_valley_s1[tri-micro_1984](!).g64
 
 ## D37-1+2 - Druid, Dragon Skull, Paper Boy, Dragons Lair
 - **Druid** **M**

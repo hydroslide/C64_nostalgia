@@ -47,23 +47,27 @@ def targets(out: Path, manifest: list, only: str | None):
 MENU_LOAD = 'load"menu",8,1\nrun\n'
 
 
+STAR_LOAD = 'load"*",8,1\nrun\n'
+
+
 def shots_for(m: dict, path: Path, shots: Path, seconds: float) -> list[dict]:
-    """Screenshots to take for one image."""
+    """Screenshots to take for one image.
+
+    Everything is driven the same way the Pi1541 will be: attach the disk,
+    type the LOAD, let the real 1541 answer. VICE's autostart quietly swaps
+    in its virtual drive, which reports ?LOAD ERROR on perfectly good disks
+    and skips the SEARCHING/LOADING lines a menu depends on - so it tests
+    something that will never happen on the hardware.
+    """
+    jobs = [dict(png=shots / f"{path.stem}.png", caption=f"{m['side']}  {path.name}",
+                 keys=MENU_LOAD if m["kind"] == "menu" else STAR_LOAD,
+                 seconds=seconds * 8, true_drive=True, attach=True)]
     if m["kind"] == "menu":
-        # Type the LOAD by hand against the real drive. Autostart swaps in
-        # VICE's virtual drive, which skips the SEARCHING/LOADING lines the
-        # menu's cursor arithmetic is built around - so autostarting would
-        # test something the Pi1541 will never do.
-        return [
-            dict(png=shots / f"{path.stem}.png", caption=f"{m['side']}  {path.name}",
-                 keys=MENU_LOAD, seconds=seconds * 3, true_drive=True, attach=True),
-            dict(png=shots / f"{path.stem} [A].png", caption=f"{m['side']}  menu -> first game",
-                 keys=MENU_LOAD + "a", seconds=seconds * 12, true_drive=True, attach=True),
-        ]
-    true_drive = path.suffix.lower() == ".g64"
-    return [dict(png=shots / f"{path.stem}.png", caption=f"{m['side']}  {path.name}",
-                 keys=None, seconds=seconds * (6 if true_drive else 1),
-                 true_drive=true_drive, attach=False)]
+        jobs.append(dict(png=shots / f"{path.stem} [A].png",
+                         caption=f"{m['side']}  menu -> first game",
+                         keys=MENU_LOAD + "a", seconds=seconds * 16,
+                         true_drive=True, attach=True))
+    return jobs
 
 
 def sheet(pngs: list[tuple[Path, str]], out_png: Path):

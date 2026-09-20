@@ -28,6 +28,7 @@ explains the card to whoever is holding it.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import io
 import json
 import re
@@ -103,7 +104,86 @@ def need(tool: str):
         sys.exit(f"'{tool}' not found - install VICE (brew install vice / apt install vice)")
 
 
-def menu_basic(title: str, games: list, vartab: int = 0) -> str:
+# --------------------------------------------------------------- menus -----
+# PETSCII colour codes, as CHR$ takes them.
+BLACK, WHITE, CYAN, PURPLE, GREEN, BLUE, YELLOW = 144, 5, 159, 156, 30, 31, 158
+ORANGE, LT_RED, DK_GREY, GREY, LT_GREEN, LT_BLUE, LT_GREY = 129, 150, 151, 152, 153, 154, 155
+RVS_ON, RVS_OFF = 18, 146
+
+# (border, background, title, item, letter, prompt). Backgrounds are kept dark
+# and text light, so every one of these is actually readable on a CRT.
+PALETTES = [
+    (6, 0, YELLOW, WHITE, LT_GREEN, LT_BLUE),
+    (11, 0, LT_GREEN, LT_GREY, WHITE, YELLOW),
+    (14, 6, WHITE, YELLOW, LT_GREY, LT_GREEN),
+    (2, 0, LT_RED, WHITE, YELLOW, CYAN),
+    (5, 0, LT_GREEN, CYAN, WHITE, YELLOW),
+    (12, 11, WHITE, YELLOW, LT_GREEN, LT_BLUE),
+    (4, 0, CYAN, WHITE, PURPLE, YELLOW),
+    (0, 6, CYAN, WHITE, YELLOW, LT_GREY),
+    (9, 0, ORANGE, LT_GREY, YELLOW, WHITE),
+    (3, 0, CYAN, LT_GREEN, WHITE, YELLOW),
+]
+
+STYLES = ["plain", "ruled", "boxed", "cracked"]
+
+
+def theme_for(side_id: str) -> dict:
+    """Pick a look for one side, the same one every build.
+
+    The disks did not all look alike - some had a plain typed list, some had
+    whatever the cracking group had bolted on that month - so the menus
+    should not either. A digest of the side id spreads the styles and
+    palettes properly (adding up the characters of "D31" and "D40" gives the
+    same number) and keeps a rebuild from reshuffling them.
+    """
+    h = int(hashlib.md5(side_id.encode()).hexdigest()[:8], 16)
+    pal = PALETTES[(h >> 3) % len(PALETTES)]
+    return {"style": STYLES[h % len(STYLES)],
+            "border": pal[0], "background": pal[1],
+            "title": pal[2], "item": pal[3], "letter": pal[4], "prompt": pal[5]}
+
+
+def bar_line(ln: int, colour: int) -> str:
+    """A solid 39-character bar in reverse video - the cheapest raster bar."""
+    return f'{ln} printchr$({colour})chr$({RVS_ON});:fori=1to39:print" ";:next:printchr$({RVS_OFF})'
+
+
+def header_lines(style: str, t: str, th: dict) -> list[str]:
+    """Lines 20-29: whatever this disk's menu calls itself."""
+    width = min(len(t), 30)
+    if style == "plain":
+        return [f'20 print"{{down}}   "chr$({th["title"]})"{t}"']
+    if style == "ruled":
+        return [f'20 print"{{down}}   "chr$({th["title"]})"{t}"',
+                f'22 print"   ";:fori=1to{width}:print"{{CBM-T}}";:next:print']
+    if style == "boxed":
+        return [bar_line(20, th["title"]),
+                f'22 print"{{down}}"chr$({th["title"]})"   {t}"',
+                bar_line(24, th["title"]),
+                '26 print']
+    # cracked
+    return [bar_line(20, th["letter"]),
+            f'22 printchr$({th["title"]})"   *** {t} ***"',
+            bar_line(24, th["letter"]),
+            '26 print']
+
+
+def prompt_lines(style: str, th: dict) -> list[str]:
+    if style == "cracked":
+        return ['60 print:printchr$(%d)"   < press a letter to load >"' % th["prompt"]]
+    if style == "boxed":
+        return ['60 print:printchr$(%d)"   select a game:"' % th["prompt"]]
+    return ['60 print:printchr$(%d)"   press a letter"' % th["prompt"]]
+
+
+def item_line(style: str, th: dict) -> str:
+    sep = '")  "' if style in ("cracked", "boxed") else '"   "'
+    return (f'50 printchr$({th["letter"]})"   "chr$(64+i)'
+            f'chr$({th["item"]}){sep}t$(i):next')
+
+
+def menu_basic(title: str, games: list, theme: dict, vartab: int = 0) -> str:
     """games = [(label, filename, sys_addr)]. Returns petcat -w2 source.
 
     The usual way to write one of these is to print a LOAD line at the top
@@ -121,8 +201,8 @@ def menu_basic(title: str, games: list, vartab: int = 0) -> str:
       * anything else is loaded with ",8,1", BASIC restarts *this* program,
         line 1 sees the flag left in the tape buffer and SYSes into it.
 
-    The tape buffer at 828 is used for the flag rather than a variable
-    because line 2 has to CLR (see below) and that would wipe a variable.
+    The tape buffer at 828 holds the flag rather than a variable because
+    line 2 has to CLR, which would wipe a variable.
 
     Line 2 exists because LOAD"MENU",8,1 - which is what the original
     sleeves say - puts the bytes in memory without telling BASIC where the
@@ -132,18 +212,23 @@ def menu_basic(title: str, games: list, vartab: int = 0) -> str:
     them in cannot change the program's length.
     """
     t = c64_name(title)[:30]
+    style = theme["style"]
     lines = [
         '1 ifpeek(828)=73thenpoke828,0:sys peek(829)+256*peek(830)',
         f'2 poke45,{vartab & 0xFF:03d}:poke46,{vartab >> 8:03d}:clr',
-        '10 poke53280,6:poke53281,0:print chr$(147)chr$(158)',
-        f'20 print "{{down}}   {t}":print"   " ;:fori=1to{min(len(t), 30)}:print"{{CBM-T}}";:next:print',
+        f'10 poke53280,{theme["border"]}:poke53281,{theme["background"]}:print chr$(147)',
+    ]
+    lines += header_lines(style, t, theme)
+    lines += [
         f'30 n={len(games)}:dim t$(n),f$(n),a(n)',
         '40 fori=1ton:readt$(i),f$(i),a(i)',
-        '50 printchr$(5)"   "chr$(64+i)chr$(158)"  "t$(i):next',
-        '60 print:printchr$(154)"   press a letter"',
+        item_line(style, theme),
+    ]
+    lines += prompt_lines(style, theme)
+    lines += [
         '70 getk$:ifk$=""then70',
         '80 k=asc(k$)-64:ifk<1ork>nthen70',
-        '85 printchr$(147)chr$(158):print"{down}   loading ";t$(k)',
+        f'85 printchr$(147)chr$({theme["title"]}):print"{{down}}   loading ";t$(k)',
         '90 ifa(k)=0thenload f$(k),8',
         '95 poke828,73:poke829,a(k)-int(a(k)/256)*256:poke830,int(a(k)/256)',
         '96 load f$(k),8,1',
@@ -178,12 +263,12 @@ def pack(items: list, budget: int) -> list[list]:
     return groups
 
 
-def build_menu_prg(label: str, games: list, tmp: Path, tag: str) -> Path:
+def build_menu_prg(label: str, games: list, theme: dict, tmp: Path, tag: str) -> Path:
     """Tokenise the menu twice: once to measure it, once to bake in its size."""
     bas, prg = tmp / f"menu{tag}.bas", tmp / f"menu{tag}.prg"
 
     def tokenise(vartab: int) -> int:
-        bas.write_text(menu_basic(label, games, vartab), newline="\n")
+        bas.write_text(menu_basic(label, games, theme, vartab), newline="\n")
         run(["petcat", "-w2", "-o", str(prg), "--", str(bas)])
         return BASIC_START + prg.stat().st_size - 2  # less the 2-byte load address
 
@@ -315,7 +400,7 @@ def build_side(sid: str, entry: dict, folder: Path, auto_menu: bool,
             gs = [g for _, g, _ in group]
             srcs = [c for _, _, c in group]
             if make_menu:
-                prg = build_menu_prg(label, gs, tmp, str(n))
+                prg = build_menu_prg(label, gs, theme_for(sid), tmp, str(n))
                 parts = [(prg, "menu", (prg.stat().st_size + 253) // 254)] + parts
             total = sum(b for _, _, b in parts)
             suffix = f" ({n} of {len(groups)})" if len(groups) > 1 else ""
@@ -327,6 +412,7 @@ def build_side(sid: str, entry: dict, folder: Path, auto_menu: bool,
             run(cmd)
             manifest.append({"side": sid, "title": ", ".join(g[0] for g in gs), "image": name,
                              "folder": folder.name, "kind": "menu" if make_menu else "files",
+                             "menu_style": theme_for(sid)["style"] if make_menu else None,
                              "blocks": total,
                              "load": 'LOAD"MENU",8,1' if make_menu else 'LOAD"*",8,1',
                              "contents": srcs})

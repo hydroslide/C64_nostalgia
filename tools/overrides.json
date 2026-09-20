@@ -1,17 +1,35 @@
 {
   "_about": "Hand-picked corrections applied on top of harvest's fuzzy match. Sources are named by any unique piece of their path, so this file stays readable and fails loudly if the collections move. 'image' = mount the whole disk; 'file' = [source, FILENAME ON THAT DISK]; 'unavailable' = nothing in the local cache is this game. by_title applies wherever the title appears; by_side overrides one side only.",
-
   "by_title": {
+    "B.C.'s Quest for Tires": {
+      "image": "bcs_quest_for_tires[sierra_1983](!)",
+      "note": "the single-file hit named \"BC'S QUEST II\" turned out on screen to be B.C. II: Grog's Revenge"
+    },
+    "Mystery at Pinecrest Manor": {
+      "image": "tales_of_mystery_s2[scholastic_1984]",
+      "note": "PINECREST MANOR on its own is a story file, not a program - it needs Scholastic's Tales of Mystery engine, so the whole side goes on"
+    },
+    "Dino Eggs": {
+      "image": "dino_eggs[micro_fun_1984](ntsc)(!)",
+      "note": "the file on the disk loads at $0400, over screen memory - it is a loader stage, not the game"
+    },
     "Rambo: First Blood Part II": {
       "image": "rambo_first_blood_part_ii[ocean_1985](pal)(!)",
       "note": "fuzzy match picked Rambo III; only the Ocean original is in the cache"
     },
     "Battlezone": {
-      "file": ["htl.battlezone+.prg", "HTL.BATTLEZONE+"],
+      "file": [
+        "htl.battlezone+.prg",
+        "HTL.BATTLEZONE+"
+      ],
       "note": "Hotline crack; the earlier pick was an unrelated disk called battle.d64"
     },
     "Jungle Hunt": {
-      "unavailable": "not in the local cache - the JUNGLE file found is on an unrelated disk"
+      "file": [
+        "Jungle_Hunt_1984_Atari",
+        "JUNGLE HUNT"
+      ],
+      "note": "fetched from the Internet Archive's C64 library (Atari, 1984)"
     },
     "Pitfall!": {
       "image": "pitfall[activision_1984](!)",
@@ -26,7 +44,11 @@
       "note": "the only single file found was River Raid II"
     },
     "H.E.R.O.": {
-      "unavailable": "only copier parameters; the two 'HERO' files are Hero Quest and a Little Hero preview"
+      "file": [
+        "H.E.R.O._El_Heroe",
+        "EL HEROE"
+      ],
+      "note": "fetched from the Internet Archive - the Spanish Load 'n' Run release; same game, Spanish title screen"
     },
     "Monster Smash": {
       "image": "monster_smash[datamost_1983](!)",
@@ -40,7 +62,8 @@
       "image": "kung-fu_way_of_the_exploding_fist[melbourne_house_1985](pal)(!)"
     },
     "Sublogic Football": {
-      "unavailable": "not in the local cache - only a Kracker Jax parameter by that name"
+      "image": "d64_SubLogic_Football_1986_Sublogic",
+      "note": "fetched from the Internet Archive; multi-file, so the whole side goes on"
     },
     "Blue Thunder": {
       "image": "blue_thunder[elite_1984](pal)(!)",
@@ -54,10 +77,6 @@
       "image": "boulder_dash[first_star_1984](pal)(!)",
       "note": "SUBSTITUTE - Boulder Dash II (Rockford's Riot) is not in the cache, this is the first game"
     },
-    "Mystery at Pinecrest Manor": {
-      "file": ["tales_of_mystery_s2[scholastic_1984]", "PINECREST MANOR"],
-      "note": "it is one story on Scholastic's Tales of Mystery disk"
-    },
     "Gauntlet: The Deeper Dungeons": {
       "image": "gauntlet_deeper_dungeons[us_gold_1987](ntsc)",
       "note": "the draft reused the plain Gauntlet disk"
@@ -67,7 +86,8 @@
       "note": "the earlier pick was Upside Down, a different game"
     },
     "Danger Mouse in the Black Forest Chateau": {
-      "unavailable": "not in the local cache"
+      "image": "Danger_Mouse_in_the_Black_Forest_Chateau_1984_Creative_Sparks_cr_CMM",
+      "note": "fetched from the Internet Archive (Creative Sparks, 1984); loads in two parts, so the whole side goes on"
     },
     "Lode Runner": {
       "image": "lode_runner[br0derbund_1983](lr)(yellow_label)(!)",
@@ -78,42 +98,67 @@
       "note": "the disk file was a 1-block loader"
     },
     "Bagitman": {
-      "unavailable": "not in the local cache - the match was Batman",
-      "start": "sys 16384"
+      "file": [
+        "Bagitman_1984_Aardvark",
+        "BAGITMAN"
+      ],
+      "note": "fetched from the Internet Archive (Aardvark, 1984) - the label says SYS 16384, which the build works out from the file itself"
     },
     "Gyruss": {
-      "unavailable": "not in the local cache"
+      "file": [
+        "Gyruss_Planeta_Alienigena",
+        "PLANETA ALIENIG."
+      ],
+      "note": "fetched from the Internet Archive - the Spanish Load 'n' Run release of the Parker Brothers game"
     },
     "The Game Show": {
-      "unavailable": "not in the local cache - the GAME file found was from Colonial Trader"
+      "image": "Game_Show_The_1984_Advanced_Ideas",
+      "note": "fetched from the Internet Archive (Advanced Ideas, 1984); multi-file, so the whole side goes on"
     },
     "Genesis": {
       "image": "genesis[datasoft_1983](!)",
       "note": "everything else matching 'genesis' was the Genesis Project cracking group"
     },
     "Big Top Barney": {
-      "unavailable": "not in the local cache"
+      "file": [
+        "Bigtop_Barney_1984_Interceptor_Micros",
+        "BIGTOP BARNEY"
+      ],
+      "note": "fetched from the Internet Archive (Interceptor Micros, 1984)"
     },
     "World Karate Championship": {
       "image": "world_karate_cha.d64",
       "note": "Eagle Soft crack, multi-file (LDR + GAME.A/B) so it needs the whole side; the KARATE CHAMP hit is Data East's Karate Champ, a different game"
     },
     "Mario Bros.": {
-      "file": ["plutonium_cracke/mario_bros.d64", "MARIO BROS. ?PC?"]
+      "file": [
+        "plutonium_cracke/mario_bros.d64",
+        "MARIO BROS. ?PC?"
+      ]
     },
     "Centropods": {
-      "file": ["arcade_games[keypunch_198x](!)", "CENTRIPOD"],
+      "file": [
+        "arcade_games[keypunch_198x](!)",
+        "CENTRIPOD"
+      ],
       "note": "UNCONFIRMED - a Centipede-style game on a Keypunch compilation"
     },
     "Moon Patrol": {
-      "file": ["tomahawk[digital_integration_1986](alt)", "MOON PATROL"],
+      "file": [
+        "tomahawk[digital_integration_1986](alt)",
+        "MOON PATROL"
+      ],
       "note": "UNCONFIRMED - the file sits on a disk labelled Tomahawk"
     },
     "Caveman": {
-      "unavailable": "UNCONFIRMED - the only hit is a four-disk game by Zinta, unlikely to be the arcade Caveman"
+      "unavailable": "still not found - the archive's 'Caveman' is a 1990 Compute! type-in and 'Crazy Caveman' does not look like the arcade game"
     },
     "Rad Skater": {
-      "unavailable": "label never identified; no C64 game by this name"
+      "file": [
+        "Skate_or_Die_1987_Electronic_Arts",
+        "SKATE OR ACE/GCF"
+      ],
+      "note": "SUBSTITUTE - no C64 game is called Rad Skater; Skate or Die (EA, 1987) is the likeliest thing the label meant"
     },
     "Boxing": {
       "unavailable": "label too generic to identify"
@@ -125,21 +170,33 @@
       "unavailable": "label never identified"
     },
     "Time Pilot": {
-      "unavailable": "not in the local cache"
+      "unavailable": "no C64 release found anywhere - the arcade game was never ported to the 64; the label may mean a clone"
     },
     "Hey Diddle Diddle": {
-      "unavailable": "not in the local cache"
+      "image": "Hey_Diddle_Diddle_1983_Spinnaker_Software",
+      "note": "fetched from the Internet Archive (Spinnaker, 1983); multi-file, so the whole side goes on"
     },
     "Haunted House": {
-      "unavailable": "not in the local cache"
+      "file": [
+        "Haunted_House_1983_Alligata",
+        "HAUNTED HOUSE"
+      ],
+      "note": "fetched from the Internet Archive (Alligata, 1983)"
     },
     "Mario's Brewery": {
-      "unavailable": "not in the local cache"
+      "file": [
+        "d64_Marios_Brewery_1983",
+        "MARIO'S BREWERY"
+      ],
+      "note": "fetched from the Internet Archive (Mr. Computer, 1983)"
     },
     "Mr. Wimpy": {
-      "unavailable": "not in the local cache"
+      "file": [
+        "d64_Mr._Wimpy_The_Hamburger_Game",
+        "MR. WIMPY"
+      ],
+      "note": "fetched from the Internet Archive (Ocean, 1984)"
     }
   },
-
   "by_side": {}
 }
