@@ -297,8 +297,17 @@ def run(cmd: list[str]):
 
 
 # --------------------------------------------------------------- catalog ---
+FOLDER_LIMIT = 58
+
+
 def disk_folders() -> dict[str, str]:
-    """One folder name per physical disk, reading like its label did."""
+    """One folder name per physical disk, reading like its label did.
+
+    Some labels list eight games, which is longer than anything wants to
+    show. Rather than cutting mid-word, titles are added while they fit and
+    the rest are counted - "D03 Action Biker, Battlezone, Decathlon +5 more"
+    reads like a label; a hard truncation does not.
+    """
     catalog = json.loads(CATALOG.read_text())["disks"]
     out = {}
     for disk in catalog:
@@ -306,9 +315,17 @@ def disk_folders() -> dict[str, str]:
         for side in disk["sides"]:
             for t in side["titles"]:
                 t = re.sub(r"^[A-Z]=", "", t).strip()
-                if t not in titles:
+                if t and t not in titles:
                     titles.append(t)
-        out[disk["id"]] = safe_filename(f"{disk['id']} {', '.join(titles)}")
+        name, shown = disk["id"], 0
+        for t in titles:
+            candidate = f"{name}{',' if shown else ''} {t}"
+            if len(candidate) > FOLDER_LIMIT:
+                break
+            name, shown = candidate, shown + 1
+        if shown < len(titles):
+            name += f" +{len(titles) - shown} more"
+        out[disk["id"]] = safe_filename(name, 70)
     return out
 
 

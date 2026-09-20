@@ -70,6 +70,25 @@ def shots_for(m: dict, path: Path, shots: Path, seconds: float) -> list[dict]:
     return jobs
 
 
+def looks_idle(png: Path) -> bool:
+    """True if the screenshot looks like nothing happened.
+
+    A C64 sitting at READY. is two colours with the background covering
+    almost everything; a game - even a loading screen - is busier than that.
+    Crude, and it is meant to be: it only decides what to look at first.
+    """
+    try:
+        im = Image.open(png).convert("RGB")
+    except Exception:  # noqa: BLE001
+        return True
+    colours = im.getcolors(maxcolors=65536)
+    if not colours:
+        return False
+    total = im.width * im.height
+    top = max(colours)[0]
+    return len(colours) <= 4 and top / total > 0.93
+
+
 def sheet(pngs: list[tuple[Path, str]], out_png: Path):
     w = TILE[0] * COLS
     h = (TILE[1] + LABEL_H) * ROWS
@@ -130,6 +149,12 @@ def main():
     for n in range(0, len(taken), per):
         sheet(taken[n:n + per], sheets / f"sheet{n // per + 1:02d}.png")
     print(f"{len(taken)} screenshots, {(len(taken) + per - 1) // per} sheets -> {sheets}")
+
+    idle = [c for png, c in taken if looks_idle(png)]
+    if idle:
+        print(f"\n{len(idle)} look like nothing happened - check these first:")
+        for c in idle:
+            print(f"  ? {c}")
 
 
 if __name__ == "__main__":
