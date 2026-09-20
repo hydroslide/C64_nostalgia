@@ -128,7 +128,17 @@ PALETTES = [
 STYLES = ["plain", "ruled", "boxed", "cracked"]
 
 
-def theme_for(side_id: str) -> dict:
+def assign_styles(side_ids: list[str]) -> dict[str, str]:
+    """Deal the four styles round-robin across the sides that get a menu.
+
+    Leaving it to the digest is fine in principle and poor in practice: there
+    are only a handful of menu disks, and a hash happily gives three of them
+    the same look. Dealing them out guarantees the variety.
+    """
+    return {sid: STYLES[i % len(STYLES)] for i, sid in enumerate(sorted(side_ids))}
+
+
+def theme_for(side_id: str, style: str | None = None) -> dict:
     """Pick a look for one side, the same one every build.
 
     The disks did not all look alike - some had a plain typed list, some had
@@ -139,7 +149,7 @@ def theme_for(side_id: str) -> dict:
     """
     h = int(hashlib.md5(side_id.encode()).hexdigest()[:8], 16)
     pal = PALETTES[(h >> 3) % len(PALETTES)]
-    return {"style": STYLES[h % len(STYLES)],
+    return {"style": style or STYLES[h % len(STYLES)],
             "border": pal[0], "background": pal[1],
             "title": pal[2], "item": pal[3], "letter": pal[4], "prompt": pal[5]}
 
@@ -304,7 +314,7 @@ def disk_folders() -> dict[str, str]:
 
 # ----------------------------------------------------------------- build ---
 def build_side(sid: str, entry: dict, folder: Path, auto_menu: bool,
-               manifest: list, cache: dict):
+               manifest: list, cache: dict, style: str | None = None):
     file_items, whole, missing = [], [], []
     for it in entry["items"]:
         if it.get("skip"):
@@ -316,6 +326,7 @@ def build_side(sid: str, entry: dict, folder: Path, auto_menu: bool,
         else:
             missing.append(it)
             manifest.append({"side": sid, "title": it["title"], "kind": "missing",
+                             "folder": folder.name,
                              "why": it.get("todo", "no source")})
 
     if file_items or whole:
@@ -351,7 +362,7 @@ def build_side(sid: str, entry: dict, folder: Path, auto_menu: bool,
                 ent = next((e for e in img.entries if e.name == it["file"]), None)
                 if ent is None:
                     print(f"  ! {sid}: '{it['file']}' not in {it['src']}")
-                    manifest.append({"side": sid, "title": it["title"], "kind": "missing",
+                    manifest.append({"side": sid, "title": it["title"], "kind": "missing", "folder": folder.name,
                                      "why": f"file {it['file']!r} vanished from its source"})
                     continue
                 data = img.read_file(ent)
@@ -400,7 +411,7 @@ def build_side(sid: str, entry: dict, folder: Path, auto_menu: bool,
             gs = [g for _, g, _ in group]
             srcs = [c for _, _, c in group]
             if make_menu:
-                prg = build_menu_prg(label, gs, theme_for(sid), tmp, str(n))
+                prg = build_menu_prg(label, gs, theme_for(sid, style), tmp, str(n))
                 parts = [(prg, "menu", (prg.stat().st_size + 253) // 254)] + parts
             total = sum(b for _, _, b in parts)
             suffix = f" ({n} of {len(groups)})" if len(groups) > 1 else ""
@@ -412,7 +423,7 @@ def build_side(sid: str, entry: dict, folder: Path, auto_menu: bool,
             run(cmd)
             manifest.append({"side": sid, "title": ", ".join(g[0] for g in gs), "image": name,
                              "folder": folder.name, "kind": "menu" if make_menu else "files",
-                             "menu_style": theme_for(sid)["style"] if make_menu else None,
+                             "menu_style": theme_for(sid, style)["style"] if make_menu else None,
                              "blocks": total,
                              "load": 'LOAD"MENU",8,1' if make_menu else 'LOAD"*",8,1',
                              "contents": srcs})
@@ -504,13 +515,15 @@ def main():
         shutil.rmtree(out)
     out.mkdir(parents=True, exist_ok=True)
     manifest, cache = [], {}
+    styles = assign_styles([sid for sid, e in sel.items()
+                            if e.get("menu") or (args.auto_menu and len(e["items"]) > 1)])
     for sid, entry in sel.items():
         if args.only and sid not in args.only:
             continue
         print(sid)
         folder = out / folders.get(sid.split("-")[0], sid.split("-")[0])
         try:
-            build_side(sid, entry, folder, args.auto_menu, manifest, cache)
+            build_side(sid, entry, folder, args.auto_menu, manifest, cache, styles.get(sid))
         except Exception as e:  # noqa: BLE001
             print(f"  ! {sid} failed: {e}")
     (out / "manifest.json").write_text(json.dumps(manifest, indent=1))

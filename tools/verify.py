@@ -33,11 +33,11 @@ LABEL_H = 34
 COLS, ROWS = 5, 4
 
 
-def targets(out: Path, manifest: list, only: str | None):
+def targets(out: Path, manifest: list, only: list[str] | None):
     for m in manifest:
         if m["kind"] == "missing":
             continue
-        if only and not m["side"].startswith(only):
+        if only and not any(m["side"].startswith(o) for o in only):
             continue
         path = out / m["folder"] / m["image"]
         if path.exists():
@@ -94,10 +94,10 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--out", default=str(HERE.parent / "card"))
     ap.add_argument("--shots", default=str(HERE / "shots"))
-    ap.add_argument("--only", help="limit to side ids starting with this, e.g. D05")
+    ap.add_argument("--only", nargs="*", help="limit to side ids starting with these, e.g. D05 D16")
     ap.add_argument("--seconds", type=float, default=15.0)
     ap.add_argument("--sheets-only", action="store_true", help="skip VICE, just re-tile")
-    ap.add_argument("--workers", type=int, default=max(2, (os.cpu_count() or 4) - 1),
+    ap.add_argument("--workers", type=int, default=max(2, os.cpu_count() or 4),
                     help="how many VICE instances to run at once")
     args = ap.parse_args()
 
