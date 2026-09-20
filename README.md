@@ -25,6 +25,10 @@ play the way they did in the 80s.
 See [`tools/README.md`](tools/README.md) for the full index → match → review →
 build workflow.
 
+- **`pi1541-case/`** — 3D-printable case models for a Pi1541 (cycle-exact
+  1541 floppy emulator) build, converted from donor designs to fit a
+  Raspberry Pi Zero. See [`pi1541-case/README.md`](pi1541-case/README.md).
+
 ## Requirements
 
 - Python 3.9+
