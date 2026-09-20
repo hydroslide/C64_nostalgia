@@ -59,16 +59,16 @@ ALIASES = {
     "Rambo: First Blood Part II": ["rambo", "rambo ii", "rambo 2", "first blood"],
     "Pitfall II: Lost Caverns": ["pitfall ii", "pitfall 2", "pitfall2"],
     "Pitfall!": ["pitfall"],
-    "B.C.'s Quest for Tires": ["bc quest", "quest for tires", "bcs quest", "bc"],
+    "B.C.'s Quest for Tires": ["bc quest", "quest for tires", "bcs quest"],
     "Mr. Robot and His Robot Factory": ["mr robot", "mrrobot"],
-    "The Way of the Exploding Fist": ["exploding fist", "way of the exploding fist", "fist"],
+    "The Way of the Exploding Fist": ["exploding fist", "way of the exploding fist"],
     "Fist: The Legend Continues": ["fist ii", "fist 2", "fist2", "legend continues"],
     "Mr. Do!": ["mr do", "mister do"],
-    "World Karate Championship": ["karate champ", "karate", "world karate"],
+    "World Karate Championship": ["karate champ", "world karate"],
     "Boulder Dash II": ["boulderdash ii", "boulder dash 2", "boulderdash 2", "bd2"],
     "Robin of the Wood": ["robin wood", "robin of the wood"],
     "Beyond the Ice Palace": ["ice palace"],
-    "Kermit's Electronic Storymaker": ["kermit", "storymaker"],
+    "Kermit's Electronic Storymaker": ["storymaker", "kermits electronic storymaker"],
     "Gauntlet: The Deeper Dungeons": ["deeper dungeons", "gauntlet dd"],
     "Mystery at Pinecrest Manor": ["pinecrest", "pinecrest manor"],
     "Flight Simulator II": ["flight sim", "flight simulator", "fs2", "fsii"],
@@ -85,16 +85,16 @@ ALIASES = {
     "Hat Trick": ["hattrick"],
     "Slap Shot": ["slapshot"],
     "Pharaoh's Curse": ["pharaohs curse", "pharos curse"],
-    "Cohen's Towers": ["cohens towers", "cohns towers", "cohen"],
+    "Cohen's Towers": ["cohens towers", "cohns towers"],
     "Kung-Fu Master": ["kung fu master", "kungfu master"],
     "Dragon's Lair": ["dragons lair"],
     "Dragonskulle": ["dragon skull", "dragonskull"],
     "Wizard's Lair": ["wizards lair"],
     "Dragonriders of Pern": ["dragon riders", "pern"],
-    "Big Top Barney": ["bigtop barney", "barney"],
+    "Big Top Barney": ["bigtop barney"],
     "WarGames": ["war games"],
     "Rocketball": ["rocket ball"],
-    "The Dolphin's Rune": ["dolphins rune", "dolphin"],
+    "The Dolphin's Rune": ["dolphins rune"],
     "Turtle Toyland Jr.": ["turtle toyland", "toyland"],
     "Summer Games II": ["summer games 2", "summergames2"],
 }
@@ -146,9 +146,16 @@ def describe(name: str, data: bytes) -> dict:
             raise ValueError("empty prg")
         return prg_record(name, len(data))
     if ext in GCR_EXT:
-        im = open_image(g64.to_d64(data, only_track=18))
-        if not im.entries:
-            raise ValueError("no directory on track 18")
+        # A heavily protected original often has no readable directory at
+        # all. It still mounts and runs on a Pi1541, so keep it as something
+        # we can offer whole, just with nothing to look inside.
+        try:
+            im = open_image(g64.to_d64(data, only_track=18))
+        except Exception:
+            im = None
+        if im is None or not im.entries:
+            return {"kind": "g64", "fmt": "g64", "disk_name": im.disk_name if im else "",
+                    "disk_id": "", "files": []}
         kind = "g64"
     else:
         im = open_image(data, lenient=True)
@@ -249,7 +256,8 @@ def title_keys(title: str) -> list[str]:
     keys.add(normalise(base))
     for a in ALIASES.get(title, []):
         keys.add(normalise(a))
-    keys = {k for k in keys if len(k) >= 2}
+    # two-letter keys ("BC") match half the collection; require three
+    keys = {k for k in keys if len(k) >= 3}
     # C64 names are max 16 chars, so also try the truncated form
     keys |= {k[:14] for k in keys if len(k) > 14}
     return sorted(keys, key=len, reverse=True)
@@ -299,10 +307,32 @@ def scorer(keys: list[str], threshold: float):
 NOISE_RE = re.compile(r"(intro|note|doc|instr|readme|crack|trainer|loader|boot|cheat|"
                       r"hiscore|highscore|score|music|demo|preview|advert)", re.I)
 
+# Copy-protection parameter and backup-tool disks. These carry a one-block
+# file named after all but every game ever released - "GHOSTBUSTERS" on a
+# Kracker Jax disk is a parameter for copying it, not the game. They score a
+# perfect name match and are never what we want.
+PARAM_SRC_RE = re.compile(r"(kracker.?jax|fast.?hack|hack.?em|param|maverick|"
+                          r"renegade|di.?sector|burst.?nibbler|super.?kit|"
+                          r"copy.?(ii|2|star)|nibbler|toolkit|unprotect|rapidlok)", re.I)
+
+# Below this a "game" is almost always a parameter, a loader stub or a note.
+MIN_GAME_BLOCKS = 12
+
+VERIFIED_RE = re.compile(r"\(!\)")  # C64 Preservation Project: verified good dump
+
 
 def file_penalty(name: str) -> float:
     """Push cracker intros and doc files below the real game."""
     return 0.06 if NOISE_RE.search(name) else 0.0
+
+
+def is_param_source(rec: dict) -> bool:
+    where = f"{rec.get('stem', '')} {rec['disk_name']} {rec.get('member') or ''} {rec['src']}"
+    return bool(PARAM_SRC_RE.search(where))
+
+
+def is_verified(rec: dict) -> bool:
+    return bool(VERIFIED_RE.search(f"{rec.get('member') or ''}{rec['src']}"))
 
 
 def source_rank(rec: dict) -> int:
@@ -360,7 +390,8 @@ def match_title(t: str, uncertain: bool, lookup: Lookup, args) -> dict:
                            "disk_name": rec["disk_name"], "kind": rec["kind"],
                            "src": rec["src"], "member": rec["member"],
                            "side": rec.get("side"), "n_files": len(rec["files"]),
-                           "rank": source_rank(rec)})
+                           "rank": source_rank(rec), "ok_src": not is_param_source(rec),
+                           "verified": is_verified(rec)})
 
     file_hits = []
     for k, occurrences in lookup.files.items():
@@ -376,12 +407,16 @@ def match_title(t: str, uncertain: bool, lookup: Lookup, args) -> dict:
                               "src": rec["src"], "member": rec["member"], "kind": rec["kind"],
                               "disk_name": rec["disk_name"],
                               "disk_score": round(whole_score.get(i, 0.0), 3),
-                              "n_files": len(rec["files"]), "rank": source_rank(rec)})
+                              "n_files": len(rec["files"]), "rank": source_rank(rec),
+                              "ok_src": not is_param_source(rec),
+                              "big_enough": blocks >= MIN_GAME_BLOCKS})
 
-    # rank: score, then a source we can actually pull files out of, then
-    # agreement with the disk/file name, then the bigger file (game, not intro)
-    file_hits.sort(key=lambda h: (h["score"], h["rank"], h["disk_score"], h["blocks"]), reverse=True)
-    image_hits.sort(key=lambda h: (h["score"], h["rank"], -(h["side"] or 1), h["n_files"]), reverse=True)
+    # Plausibility outranks similarity: a dozen disks hold a file with exactly
+    # the right name, and the parameter disks among them all score 1.00.
+    file_hits.sort(key=lambda h: (h["ok_src"], h["big_enough"], h["score"], h["rank"],
+                                  h["disk_score"], h["blocks"]), reverse=True)
+    image_hits.sort(key=lambda h: (h["ok_src"], h["score"], h["rank"], h["verified"],
+                                   -(h["side"] or 1), h["n_files"]), reverse=True)
     return {"title": t, "uncertain": uncertain, "multiload": t.lower() in MULTILOAD,
             "keys": keys, "hits": file_hits[: args.top], "images": image_hits[: args.top]}
 
@@ -407,7 +442,89 @@ def cmd_match(args):
 
     (HERE / "candidates.json").write_text(json.dumps(results, indent=1))
     write_report(results)
-    write_selection_draft(results)
+    try:
+        overrides = load_overrides(index)
+    except OverrideError as e:
+        sys.exit(f"overrides.json: {e}")
+    print(f"{len(overrides)} hand-picked overrides")
+    write_selection_draft(results, overrides)
+
+
+# ------------------------------------------------------------- overrides --
+OVERRIDES = HERE / "overrides.json"
+
+
+class OverrideError(ValueError):
+    pass
+
+
+def load_overrides(index: list) -> dict:
+    """Read overrides.json and resolve each entry against the index.
+
+    Fuzzy matching gets a lot right and a few things confidently wrong: a
+    Kracker Jax parameter named after the game, Rambo III for Rambo, Batman
+    for Bagitman. Rather than hand-editing selections.json (which a re-match
+    would overwrite), corrections live here and name their source by a piece
+    of its path, so they stay readable and fail loudly if the collection
+    moves.
+    """
+    if not OVERRIDES.exists():
+        return {}
+    raw = json.loads(OVERRIDES.read_text())
+    out = {}
+    for scope in ("by_title", "by_side"):
+        for outer, entries in raw.get(scope, {}).items():
+            for title, spec in entries.items() if scope == "by_side" else [(outer, entries)]:
+                key = (scope, outer, title) if scope == "by_side" else (scope, title, None)
+                out[key] = resolve_override(spec, index, f"{outer}/{title}")
+    return out
+
+
+def find_record(index: list, needle: str, label: str) -> dict:
+    hay = needle.lower()
+    hits = [r for r in index
+            if hay in (r["src"] + "::" + (r["member"] or "")).lower().replace("\\", "/")]
+    if not hits:
+        raise OverrideError(f"{label}: nothing in the index matches {needle!r}")
+    srcs = {(r["src"], r["member"]) for r in hits}
+    if len(srcs) > 1:
+        raise OverrideError(f"{label}: {needle!r} matches {len(srcs)} sources, e.g. "
+                            + ", ".join(sorted(f"{a}::{b}" for a, b in srcs)[:3]))
+    return hits[0]
+
+
+def resolve_override(spec: dict, index: list, label: str) -> dict:
+    item = {k: v for k, v in spec.items()
+            if k in ("start", "as", "note", "skip", "title")}
+    if "unavailable" in spec:
+        item["todo"] = spec["unavailable"]
+        return item
+    if "image" in spec:
+        rec = find_record(index, spec["image"], label)
+        item["whole_image"] = {"src": rec["src"], "member": rec["member"],
+                               "disk_name": rec["disk_name"], "kind": rec["kind"]}
+        return item
+    if "file" in spec:
+        where, fname = spec["file"]
+        rec = find_record(index, where, label)
+        match = [f for f in rec["files"] if f[0] == fname]
+        if not match:
+            names = ", ".join(sorted(f[0] for f in rec["files"])[:12])
+            raise OverrideError(f"{label}: no file {fname!r} on that source. Has: {names}")
+        item.update({"src": rec["src"], "member": rec["member"],
+                     "file": fname, "blocks": match[0][2]})
+        return item
+    raise OverrideError(f"{label}: needs one of 'image', 'file' or 'unavailable'")
+
+
+def apply_override(overrides: dict, sid: str, title: str, item: dict) -> dict:
+    for key in (("by_side", sid, title), ("by_title", title, None)):
+        if key in overrides:
+            fixed = dict(overrides[key])
+            fixed.setdefault("title", title)
+            fixed.setdefault("start", item.get("start", "run"))
+            return fixed
+    return item
 
 
 def write_report(results):
@@ -425,32 +542,36 @@ def write_report(results):
                 continue
             found += 1
             lines.append(f"- **{it['title']}**{flag}")
-            for h in it["hits"][:4]:
+            for h in it["hits"][:5]:
                 where = h["src"] + (f" :: {h['member']}" if h["member"] else "")
+                warn = ("" if h["ok_src"] else " _(parameter disk)_") + \
+                       ("" if h["big_enough"] else " _(too small)_")
                 lines.append(f"    - file {h['score']:.2f}  `{h['file']}` ({h['blocks']} blk) "
-                             f"on \"{h['disk_name']}\" - {where}")
-            for h in it["images"][:3]:
+                             f"on \"{h['disk_name']}\"{warn} - {where}")
+            for h in it["images"][:4]:
                 where = h["src"] + (f" :: {h['member']}" if h["member"] else "")
+                warn = "" if h["ok_src"] else " _(parameter disk)_"
                 lines.append(f"    - disk {h['score']:.2f}  [{h['kind']}] \"{h['disk_name']}\" "
-                             f"({h['n_files']} files) - {where}")
+                             f"({h['n_files']} files){warn} - {where}")
         lines.append("")
     lines.insert(2, f"Found candidates for {found} of {total} titles.\n")
     (HERE / "report.md").write_text("\n".join(lines))
     print(f"candidates for {found}/{total} titles -> report.md, candidates.json")
 
 
-def write_selection_draft(results):
-    """Best guess per title. Edit selections.json by hand, then run build.py."""
+def write_selection_draft(results, overrides: dict):
+    """Best guess per title, with overrides.json applied on top."""
     path = HERE / "selections.json"
-    if path.exists():
-        path = HERE / "selections.draft.json"
     sel = {}
     for sid, r in results.items():
-        entry = {"menu": r["menu"], "disk_name": f"{r['disk']} side {r['side']}"[:16],
-                 "disk_id": r["disk"][-2:], "items": [draft_item(it) for it in r["items"]]}
-        sel[sid] = entry
+        items = [apply_override(overrides, sid, it["title"], draft_item(it))
+                 for it in r["items"]]
+        sel[sid] = {"menu": r["menu"], "disk_name": f"{r['disk']} side {r['side']}"[:16],
+                    "disk_id": r["disk"][-2:], "items": items}
     path.write_text(json.dumps(sel, indent=1))
-    print(f"draft selections -> {path.name} (review before building)")
+    todo = sum(1 for e in sel.values() for i in e["items"] if "todo" in i)
+    print(f"selections -> {path.name}: {sum(len(e['items']) for e in sel.values())} titles, "
+          f"{todo} with nothing to build")
 
 
 def draft_item(it: dict) -> dict:
@@ -469,6 +590,26 @@ def draft_item(it: dict) -> dict:
     return item
 
 
+def cmd_find(args):
+    """Ad-hoc search of the index, for checking a pick by hand."""
+    index = [json.loads(l) for l in Path(args.index).open(encoding="utf-8")]
+    needle = args.text.lower().replace("_", " ")
+    rows = []
+    for rec in index:
+        tag = "P" if is_param_source(rec) else " "
+        where = rec["src"] + (f"::{rec['member']}" if rec["member"] else "")
+        hay = f'{rec.get("stem", "")} {rec["disk_name"]} {rec["src"]}'.lower().replace("_", " ")
+        if needle in hay:
+            rows.append((999, tag, "DISK", f'{rec["kind"]} "{rec["disk_name"]}"', where))
+        for fname, ftype, blocks in rec["files"]:
+            if needle in fname.lower().replace("_", " ") and ftype in ("PRG", "USR"):
+                rows.append((blocks, tag, f"{blocks:>4}b", fname, where))
+    rows.sort(key=lambda r: -r[0])
+    for _, tag, blk, name, where in rows[: args.limit]:
+        print(f"{tag} {blk}  {name:<24} {where}")
+    print(f"-- {len(rows)} hits (P = parameter/copier disk)")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--index", default=str(HERE / "index.jsonl"))
@@ -477,11 +618,14 @@ def main():
     a.add_argument("roots", nargs="+")
     a.add_argument("-v", "--verbose", action="store_true")
     a.add_argument("--rebuild", action="store_true", help="ignore the existing index and re-read everything")
+    c = sub.add_parser("find", help="search the index by substring")
+    c.add_argument("text")
+    c.add_argument("--limit", type=int, default=30)
     b = sub.add_parser("match")
     b.add_argument("--threshold", type=float, default=0.8)
     b.add_argument("--top", type=int, default=10)
     args = ap.parse_args()
-    {"index": cmd_index, "match": cmd_match}[args.cmd](args)
+    {"index": cmd_index, "match": cmd_match, "find": cmd_find}[args.cmd](args)
 
 
 if __name__ == "__main__":

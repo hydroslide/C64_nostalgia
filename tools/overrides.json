@@ -1,0 +1,145 @@
+{
+  "_about": "Hand-picked corrections applied on top of harvest's fuzzy match. Sources are named by any unique piece of their path, so this file stays readable and fails loudly if the collections move. 'image' = mount the whole disk; 'file' = [source, FILENAME ON THAT DISK]; 'unavailable' = nothing in the local cache is this game. by_title applies wherever the title appears; by_side overrides one side only.",
+
+  "by_title": {
+    "Rambo: First Blood Part II": {
+      "image": "rambo_first_blood_part_ii[ocean_1985](pal)(!)",
+      "note": "fuzzy match picked Rambo III; only the Ocean original is in the cache"
+    },
+    "Battlezone": {
+      "file": ["htl.battlezone+.prg", "HTL.BATTLEZONE+"],
+      "note": "Hotline crack; the earlier pick was an unrelated disk called battle.d64"
+    },
+    "Jungle Hunt": {
+      "unavailable": "not in the local cache - the JUNGLE file found is on an unrelated disk"
+    },
+    "Pitfall!": {
+      "image": "pitfall[activision_1984](!)",
+      "note": "the PITFAL file found sits on a Game Maker sampler"
+    },
+    "Bruce Lee": {
+      "image": "bruce_lee[datasoft_1984](!)",
+      "note": "every single-file hit was a copier parameter"
+    },
+    "River Raid": {
+      "image": "river_raid[activision_1984]",
+      "note": "the only single file found was River Raid II"
+    },
+    "H.E.R.O.": {
+      "unavailable": "only copier parameters; the two 'HERO' files are Hero Quest and a Little Hero preview"
+    },
+    "Monster Smash": {
+      "image": "monster_smash[datamost_1983](!)",
+      "note": "the MONSTERS file found was from Dragons of Flame"
+    },
+    "Ghost Manor": {
+      "image": "spikes_peak-ghost_manor[hes_1983](!)",
+      "note": "the Xonox double-ender; the single-file hit was a Kracker Jax parameter"
+    },
+    "The Way of the Exploding Fist": {
+      "image": "kung-fu_way_of_the_exploding_fist[melbourne_house_1985](pal)(!)"
+    },
+    "Sublogic Football": {
+      "unavailable": "not in the local cache - only a Kracker Jax parameter by that name"
+    },
+    "Blue Thunder": {
+      "image": "blue_thunder[elite_1984](pal)(!)",
+      "note": "the disk holds a 1-block loader; it needs the whole image"
+    },
+    "Agent USA": {
+      "image": "agent_usa[wizware_1984](!)",
+      "note": "the 23-block hit was Agent U.O.P., a different game"
+    },
+    "Boulder Dash II": {
+      "image": "boulder_dash[first_star_1984](pal)(!)",
+      "note": "SUBSTITUTE - Boulder Dash II (Rockford's Riot) is not in the cache, this is the first game"
+    },
+    "Mystery at Pinecrest Manor": {
+      "file": ["tales_of_mystery_s2[scholastic_1984]", "PINECREST MANOR"],
+      "note": "it is one story on Scholastic's Tales of Mystery disk"
+    },
+    "Gauntlet: The Deeper Dungeons": {
+      "image": "gauntlet_deeper_dungeons[us_gold_1987](ntsc)",
+      "note": "the draft reused the plain Gauntlet disk"
+    },
+    "Up'n Down": {
+      "image": "up_n_down[sega_1984](!)",
+      "note": "the earlier pick was Upside Down, a different game"
+    },
+    "Danger Mouse in the Black Forest Chateau": {
+      "unavailable": "not in the local cache"
+    },
+    "Lode Runner": {
+      "image": "lode_runner[br0derbund_1983](lr)(yellow_label)(!)",
+      "note": "the earlier pick was Road Runner"
+    },
+    "Stellar 7": {
+      "image": "stellar_7[penguin_1984](pal)(!)",
+      "note": "the disk file was a 1-block loader"
+    },
+    "Bagitman": {
+      "unavailable": "not in the local cache - the match was Batman",
+      "start": "sys 16384"
+    },
+    "Gyruss": {
+      "unavailable": "not in the local cache"
+    },
+    "The Game Show": {
+      "unavailable": "not in the local cache - the GAME file found was from Colonial Trader"
+    },
+    "Genesis": {
+      "image": "genesis[datasoft_1983](!)",
+      "note": "everything else matching 'genesis' was the Genesis Project cracking group"
+    },
+    "Big Top Barney": {
+      "unavailable": "not in the local cache"
+    },
+    "World Karate Championship": {
+      "image": "world_karate_cha.d64",
+      "note": "Eagle Soft crack, multi-file (LDR + GAME.A/B) so it needs the whole side; the KARATE CHAMP hit is Data East's Karate Champ, a different game"
+    },
+    "Mario Bros.": {
+      "file": ["plutonium_cracke/mario_bros.d64", "MARIO BROS. ?PC?"]
+    },
+    "Centropods": {
+      "file": ["arcade_games[keypunch_198x](!)", "CENTRIPOD"],
+      "note": "UNCONFIRMED - a Centipede-style game on a Keypunch compilation"
+    },
+    "Moon Patrol": {
+      "file": ["tomahawk[digital_integration_1986](alt)", "MOON PATROL"],
+      "note": "UNCONFIRMED - the file sits on a disk labelled Tomahawk"
+    },
+    "Caveman": {
+      "unavailable": "UNCONFIRMED - the only hit is a four-disk game by Zinta, unlikely to be the arcade Caveman"
+    },
+    "Rad Skater": {
+      "unavailable": "label never identified; no C64 game by this name"
+    },
+    "Boxing": {
+      "unavailable": "label too generic to identify"
+    },
+    "Mac Music": {
+      "unavailable": "label never identified"
+    },
+    "36-game compilation": {
+      "unavailable": "label never identified"
+    },
+    "Time Pilot": {
+      "unavailable": "not in the local cache"
+    },
+    "Hey Diddle Diddle": {
+      "unavailable": "not in the local cache"
+    },
+    "Haunted House": {
+      "unavailable": "not in the local cache"
+    },
+    "Mario's Brewery": {
+      "unavailable": "not in the local cache"
+    },
+    "Mr. Wimpy": {
+      "unavailable": "not in the local cache"
+    }
+  },
+
+  "by_side": {}
+}
