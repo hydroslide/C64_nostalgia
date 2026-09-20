@@ -45,7 +45,7 @@ python tools\build_rot.py
 |---|---|---|
 | `RAISE` | 3.5 | How far the board sits above the floor-aligned position. Raising it makes the light tunnel shallower and the encoder shaft stick out further. **Capped**: the ports must stay under the lower panel's top edge (z=-2) and below the seam. |
 | `BACKOFF` | 3.5 | How far the board sits off the right wall, so the top can drop straight down past the switches. |
-| `NUB_BODIES` | 1.44 / 1.94 / 2.44 | Flange lengths of the three button nubs. Set by how far the switch faces stand past the board edge (assumed 2 mm). |
+| `NUB_STEMS` | 1.0 / 2.0 / 3.0 mm proud | Stem length of the three button nubs. The cup and collar (`COLLAR_L`, `BORE_*`) stay the same across all three. |
 | `VENT_*` | 13 grooves, 2 mm pitch | The 1541-style vent band across the rear of the top. |
 | `WIN_Z` | (5, 12) | Rear window for the DIN cable, in the no-slot top. |
 

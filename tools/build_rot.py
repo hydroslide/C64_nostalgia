@@ -161,19 +161,39 @@ rear_win = BOX([-60.0, BOARD_YC - 9.25, WIN_Z[0]], [-46.0, BOARD_YC + 9.25, WIN_
 top_noslot = D(D(top, grooves), rear_win)
 
 # ================================================================ button nubs (pushed in from the inside)
-WALL_Y, PROUD = 1.51, 1.2
+# inner end: a shallow cup that caps the switch's black plunger; then a constant collar that can't pass the hole;
+# then a plain cylindrical stem with a flat top and rounded-off edges. Only the stem length varies.
+WALL_Y = 1.51
+COLLAR_L, BORE_R, BORE_DEEP, LEAD_IN = 3.0, 1.9, 2.5, 0.4     # cup swallows plunger reach of ~2.0..4.3 mm past the board edge
+TIP_R = 0.8                                                    # radius of the rounded-off top edge
+NUB_STEMS = {"short": WALL_Y + 1.0, "medium": WALL_Y + 2.0, "long": WALL_Y + 3.0}
+
+
+def nub(stem_len):
+    tipz = COLLAR_L + stem_len
+    body = [trimesh.creation.cylinder(radius=NUB_FLANGE_R, height=COLLAR_L, sections=64,
+                                      transform=trimesh.transformations.translation_matrix([0, 0, COLLAR_L / 2]))]
+    sl = stem_len - TIP_R
+    body.append(trimesh.creation.cylinder(radius=NUB_STEM_R, height=sl, sections=64,
+                                          transform=trimesh.transformations.translation_matrix([0, 0, COLLAR_L + sl / 2])))
+    t = trimesh.creation.torus(major_radius=NUB_STEM_R - TIP_R, minor_radius=TIP_R, major_sections=64, minor_sections=32)
+    t.apply_translation([0, 0, tipz - TIP_R])
+    body.append(t)
+    body.append(trimesh.creation.cylinder(radius=NUB_STEM_R - TIP_R, height=TIP_R + 0.1, sections=64,
+                                          transform=trimesh.transformations.translation_matrix([0, 0, tipz - (TIP_R + 0.1) / 2])))
+    bore = [trimesh.creation.cylinder(radius=BORE_R, height=BORE_DEEP + 0.2, sections=64,
+                                      transform=trimesh.transformations.translation_matrix([0, 0, (BORE_DEEP - 0.2) / 2])),
+            trimesh.creation.cylinder(radius=BORE_R + 0.25, height=LEAD_IN + 0.2, sections=64,
+                                      transform=trimesh.transformations.translation_matrix([0, 0, (LEAD_IN - 0.2) / 2]))]
+    return D(U(body), U(bore))
+
+
 nubs = {}
-for tag, body in NUB_BODIES.items():
-    flange = trimesh.creation.cylinder(radius=NUB_FLANGE_R, height=body, sections=64)
-    flange.apply_translation([0, 0, body / 2])
-    sh = WALL_Y + PROUD - NUB_STEM_R + 0.2
-    stem = trimesh.creation.cylinder(radius=NUB_STEM_R, height=sh, sections=64)
-    stem.apply_translation([0, 0, body + sh / 2 - 0.1])
-    dome = trimesh.creation.icosphere(subdivisions=3, radius=NUB_STEM_R)
-    dome.apply_translation([0, 0, body + WALL_Y + PROUD - NUB_STEM_R])
-    nubs[f"button_nub_{tag}"] = U([flange, stem, dome])
-    print(f"nub {tag:7s}: total {nubs[f'button_nub_{tag}'].bounds[1][2]:.2f} mm "
-          f"(flange {body} + wall {WALL_Y} + {PROUD} proud)")
+for tag, sl in NUB_STEMS.items():
+    m = nub(sl)
+    nubs[f"button_nub_{tag}"] = m
+    print(f"nub {tag:7s}: total {m.bounds[1][2]:.2f} mm = cup/collar {COLLAR_L} + stem {sl:.2f} "
+          f"-> stands {sl - WALL_Y:.1f} mm proud; cup bore {BORE_R * 2:.1f} x {BORE_DEEP} deep")
 
 print(f"\nboard raised {RAISE} mm, moved {BACKOFF} mm off the right wall; tunnel depth {16.0 - (26.0 + DZ):.1f} mm; "
       f"button axis z={BTN_Z:.2f}; rear window z {WIN_Z}")
