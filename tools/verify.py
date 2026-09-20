@@ -81,6 +81,10 @@ def looks_idle(png: Path) -> bool:
         im = Image.open(png).convert("RGB")
     except Exception:  # noqa: BLE001
         return True
+    # Crop to the 320x200 screen. The border is a solid slab of its own
+    # colour and counting it makes every shot look busy enough to pass.
+    x, y = (im.width - 320) // 2, (im.height - 200) // 2
+    im = im.crop((max(0, x), max(0, y), max(0, x) + 320, max(0, y) + 200))
     colours = im.getcolors(maxcolors=65536)
     if not colours:
         return False

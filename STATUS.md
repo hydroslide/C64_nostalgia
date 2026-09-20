@@ -10,7 +10,7 @@ Branch: `codex/disk-rebuild` (merges into `dev`; `main` stays release-ready).
 
 ## The short version
 
-**`card/` is built and ready to copy.** 94 disk images across 39 folders, one
+**`card/` is built and ready to copy.** 93 disk images across 40 folders, one
 folder per original floppy, named the way its label reads. **115 of the 120
 catalog titles** have a source. Every image has been booted in an emulator and
 looked at.
@@ -37,8 +37,8 @@ looked at.
 
 | | count |
 |---|---|
-| Whole images (`.g64` originals, cracked `.d64` sides) | 64 |
-| Rebuilt sides assembled from single files | 25 |
+| Whole images (`.g64` originals, cracked `.d64` sides) | 60 |
+| Rebuilt sides assembled from single files | 28 |
 | Of those, sides with a working `MENU` program | 5 |
 | Titles with no source at all | 5 |
 
@@ -62,10 +62,12 @@ real 1541 answer.
 
 ## Coverage, honestly
 
-**Fourteen games were fetched from the Internet Archive**, none of which any
-local collection had: Jungle Hunt, H.E.R.O., Sublogic Football, Haunted House,
-Bagitman, Mario's Brewery, Mr. Wimpy, Gyruss, The Game Show, Big Top Barney,
-Hey Diddle Diddle and Danger Mouse in the Black Forest Chateau.
+**Sixteen games were fetched from the Internet Archive.** Fourteen because no
+local collection had them at all — Jungle Hunt, H.E.R.O., Sublogic Football,
+Haunted House, Bagitman, Mario's Brewery, Mr. Wimpy, Gyruss, The Game Show, Big
+Top Barney, Hey Diddle Diddle, Danger Mouse in the Black Forest Chateau, and
+Skate or Die standing in for "Rad Skater" — and two, Rambo and Spelunker,
+because the only local copies were originals that would not start.
 
 **Five titles are still not on the card:**
 

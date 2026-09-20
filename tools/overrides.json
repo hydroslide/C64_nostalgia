@@ -7,15 +7,18 @@
     },
     "Mystery at Pinecrest Manor": {
       "image": "tales_of_mystery_s2[scholastic_1984]",
-      "note": "PINECREST MANOR on its own is a story file, not a program - it needs Scholastic's Tales of Mystery engine, so the whole side goes on"
+      "note": "PINECREST MANOR on its own is a story file, not a program - it needs Scholastic's Tales of Mystery engine, so the whole side goes on; the original would not come up in the emulator either, so it may want the Pi1541 rather than VICE"
     },
     "Dino Eggs": {
       "image": "dino_eggs[micro_fun_1984](ntsc)(!)",
       "note": "the file on the disk loads at $0400, over screen memory - it is a loader stage, not the game"
     },
     "Rambo: First Blood Part II": {
-      "image": "rambo_first_blood_part_ii[ocean_1985](pal)(!)",
-      "note": "fuzzy match picked Rambo III; only the Ocean original is in the cache"
+      "file": [
+        "Rambo_First_Blood_Part_II_1986_Ocean_cr_Sharks",
+        "RAMBO    /SHARKS"
+      ],
+      "note": "fetched from the Internet Archive - the Ocean original would not come up in the emulator, this is the Sharks crack"
     },
     "Battlezone": {
       "file": [
@@ -94,8 +97,8 @@
       "note": "the earlier pick was Road Runner"
     },
     "Stellar 7": {
-      "image": "stellar_7[penguin_1984](pal)(!)",
-      "note": "the disk file was a 1-block loader"
+      "image": "stellar7.d64",
+      "note": "the Penguin original would not come up in the emulator; this is the cracked disk"
     },
     "Bagitman": {
       "file": [
@@ -196,6 +199,42 @@
         "MR. WIMPY"
       ],
       "note": "fetched from the Internet Archive (Ocean, 1984)"
+    },
+    "Star Wars": {
+      "file": [
+        "ikari/ai200-io/star wars [ts].prg",
+        "STAR WARS"
+      ],
+      "note": "the Broderbund original would not come up in the emulator; this is the cracked single file"
+    },
+    "RoboCop": {
+      "file": [
+        "robocop.ocean_so.d64",
+        "ROBOCOP     /DCS"
+      ],
+      "note": "the Data East original would not come up in the emulator; this is Ocean's, cracked by DCS"
+    },
+    "10th Frame": {
+      "file": [
+        "10th frame.prg",
+        "10TH FRAME"
+      ],
+      "note": "the Access original is dongle-protected and would not come up; this is the cracked single file"
+    },
+    "Leader Board": {
+      "file": [
+        "leader-b. o.k.prg",
+        "LEADER B. O.K"
+      ],
+      "note": "the Access original is dongle-protected and would not come up in the emulator; this is the cracked single file"
+    },
+    "Leader Board Tournament / World Class Leader Board": {
+      "image": "world_class_lead.d64",
+      "note": "the LEADERBOARD file on this disk is a 51-block loader, so the whole side goes on"
+    },
+    "Spelunker": {
+      "image": "Spelunker_1984_Broderbund_cr_Archibald",
+      "note": "fetched from the Internet Archive - the Ariolasoft original would not come up in the emulator; this crack loads in parts, so the whole side goes on"
     }
   },
   "by_side": {}

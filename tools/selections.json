@@ -5,13 +5,11 @@
   "disk_id": "01",
   "items": [
    {
-    "note": "fuzzy match picked Rambo III; only the Ocean original is in the cache",
-    "whole_image": {
-     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\r\\rambo_first_blood_part_ii[ocean_1985](pal)(!).zip",
-     "member": "rambo_first_blood_part_ii[ocean_1985](pal)(!).g64",
-     "disk_name": "\"???? ?\"0:*\",8,1",
-     "kind": "g64"
-    },
+    "note": "fetched from the Internet Archive - the Ocean original would not come up in the emulator, this is the Sharks crack",
+    "src": "downloads\\Rambo_First_Blood_Part_II_1986_Ocean_cr_Sharks__Rambo_First_Blood_Part_II_1986_Ocean_cr_Sharks.d64",
+    "member": null,
+    "file": "RAMBO    /SHARKS",
+    "blocks": 136,
     "title": "Rambo: First Blood Part II"
    },
    {
@@ -386,13 +384,14 @@
     "title": "Pitfall!"
    },
    {
-    "title": "Spelunker",
+    "note": "fetched from the Internet Archive - the Ariolasoft original would not come up in the emulator; this crack loads in parts, so the whole side goes on",
     "whole_image": {
-     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\s\\spelunker[ariolasoft_198x](pal)(!).zip",
-     "member": "spelunker[ariolasoft_198x](pal)(!).g64",
-     "disk_name": "SPELUNKER",
-     "kind": "g64"
-    }
+     "src": "downloads\\Spelunker_1984_Broderbund_cr_Archibald__Spelunker_1984_Broderbund_cr_Archibald.d64",
+     "member": null,
+     "disk_name": "UPLOAD BY OUG",
+     "kind": "disk"
+    },
+    "title": "Spelunker"
    },
    {
     "title": "Popeye",
@@ -531,13 +530,12 @@
   "disk_id": "13",
   "items": [
    {
-    "title": "RoboCop",
-    "whole_image": {
-     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\r\\robocop[data_east_1987](ntsc)(!).zip",
-     "member": "robocop[data_east_1987](ntsc)(!).g64",
-     "disk_name": "ROBOCOP",
-     "kind": "g64"
-    }
+    "note": "the Data East original would not come up in the emulator; this is Ocean's, cracked by DCS",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\doughnut_crackin\\robocop.ocean_so.d64",
+    "member": null,
+    "file": "ROBOCOP     /DCS",
+    "blocks": 196,
+    "title": "RoboCop"
    }
   ]
  },
@@ -780,13 +778,12 @@
   "disk_id": "19",
   "items": [
    {
-    "title": "Star Wars",
-    "whole_image": {
-     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\s\\star_wars[br0derbund_1988](ntsc)(!).zip",
-     "member": "star_wars[br0derbund_1988](ntsc)(!).g64",
-     "disk_name": "STAR WARS",
-     "kind": "g64"
-    }
+    "note": "the Broderbund original would not come up in the emulator; this is the cracked single file",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\ikari\\ai200-io\\star wars [ts].prg",
+    "member": null,
+    "file": "STAR WARS",
+    "blocks": 169,
+    "title": "Star Wars"
    }
   ]
  },
@@ -811,7 +808,7 @@
   "disk_id": "20",
   "items": [
    {
-    "note": "PINECREST MANOR on its own is a story file, not a program - it needs Scholastic's Tales of Mystery engine, so the whole side goes on",
+    "note": "PINECREST MANOR on its own is a story file, not a program - it needs Scholastic's Tales of Mystery engine, so the whole side goes on; the original would not come up in the emulator either, so it may want the Pi1541 rather than VICE",
     "whole_image": {
      "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\t\\tales_of_mystery_s2[scholastic_1984].zip",
      "member": "tales_of_mystery_s2[scholastic_1984].g64",
@@ -885,13 +882,12 @@
   "disk_id": "22",
   "items": [
    {
-    "title": "Leader Board",
-    "whole_image": {
-     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\l\\leaderboard[access_1986](dongle)(ntsc)(!).zip",
-     "member": "leaderboard[access_1986](dongle)(ntsc)(!).g64",
-     "disk_name": "LEADER BOARD",
-     "kind": "g64"
-    }
+    "note": "the Access original is dongle-protected and would not come up in the emulator; this is the cracked single file",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\radwar\\leader-b. o.k.prg",
+    "member": null,
+    "file": "LEADER B. O.K",
+    "blocks": 177,
+    "title": "Leader Board"
    }
   ]
  },
@@ -901,20 +897,22 @@
   "disk_id": "23",
   "items": [
    {
-    "title": "10th Frame",
-    "whole_image": {
-     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\0\\10th_frame[access_1986](dongle)(alt2)(!).zip",
-     "member": "10th_frame[access_1986](dongle)(alt2)(!).g64",
-     "disk_name": "10TH FRAME",
-     "kind": "g64"
-    }
+    "note": "the Access original is dongle-protected and would not come up; this is the cracked single file",
+    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\dynamic_duo\\10th frame.prg",
+    "member": null,
+    "file": "10TH FRAME",
+    "blocks": 156,
+    "title": "10th Frame"
    },
    {
-    "title": "Leader Board Tournament / World Class Leader Board",
-    "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\untouchable_crac\\world_class_lead.d64",
-    "member": null,
-    "file": "LEADERBOARD",
-    "blocks": 51
+    "note": "the LEADERBOARD file on this disk is a 51-block loader, so the whole side goes on",
+    "whole_image": {
+     "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\untouchable_crac\\world_class_lead.d64",
+     "member": null,
+     "disk_name": "DIGITAL DUNGEON",
+     "kind": "disk"
+    },
+    "title": "Leader Board Tournament / World Class Leader Board"
    }
   ]
  },
@@ -1427,12 +1425,12 @@
     "blocks": 133
    },
    {
-    "note": "the disk file was a 1-block loader",
+    "note": "the Penguin original would not come up in the emulator; this is the cracked disk",
     "whole_image": {
-     "src": "D:\\C64\\C64_Preservation_Project_10th_Anniversary_Collection_G64\\c64pp-g64-zip\\s\\stellar_7[penguin_1984](pal)(!).zip",
-     "member": "stellar_7[penguin_1984](pal)(!).g64",
-     "disk_name": "STELLAR 7",
-     "kind": "g64"
+     "src": "D:\\C64\\tdd-groups-cd-2010-03-21\\tdd-groups-cd\\eagle_soft_incor\\ai200-mightm1b\\stellar7.d64",
+     "member": null,
+     "disk_name": "",
+     "kind": "disk"
     },
     "title": "Stellar 7"
    }

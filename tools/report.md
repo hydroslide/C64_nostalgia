@@ -7,11 +7,11 @@ Single files first, then whole images.
 
 ## D01-1 - Rambo, Commando, Green Beret
 - **Rambo: First Blood Part II**
+    - file 1.00  `RAMBO    /SHARKS` (136 blk) on "" - downloads\Rambo_First_Blood_Part_II_1986_Ocean_cr_Sharks__Rambo_First_Blood_Part_II_1986_Ocean_cr_Sharks.d64
     - file 0.91  `RAMBO 3+23/IKARI` (75 blk) on "DIGITAL DUNGEON " - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\ikari\ai200-io\rambo_iii.d64
     - file 0.91  `RAMBO 3 ? /IKARI` (37 blk) on "DIGITAL DUNGEON " - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\ikari\ai200-io\rambo_iii.d64
     - file 0.85  `JWWK RAMBO     ` (41 blk) on "     S.P. - SC  " - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\s\saracen_paint_s2[idea_1990].zip :: saracen_paint_s2[idea_1990].g64
-    - file 0.80  `RAM2` (191 blk) on "RAMBO" - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\r\rambo_first_blood_part_ii[thunder_mtn_1985](ntsc)(!).zip :: rambo_first_blood_part_ii[thunder_mtn_1985](ntsc)(!).g64
-    - file 0.80  `AMO 2` (20 blk) on "BERANIA" - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\b\berania_s3[funk_1995](german)(pal)(!).zip :: berania_s3[funk_1995](german)(pal)(!).g64
+    - file 0.84  `RAMBO PIC+MUSIC!` (40 blk) on "" - downloads\Rambo_First_Blood_Part_II_1986_Ocean_cr_Sharks__Rambo_First_Blood_Part_II_1986_Ocean_cr_Sharks.d64
     - disk 1.00  [g64] ""???? ?"0:*",8,1" (8 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\r\rambo_first_blood_part_ii[ocean_1985](pal)(!).zip :: rambo_first_blood_part_ii[ocean_1985](pal)(!).g64
     - disk 1.00  [g64] "RAMBO" (6 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\r\rambo_first_blood_part_ii[thunder_mtn_1985](ntsc)(!).zip :: rambo_first_blood_part_ii[thunder_mtn_1985](ntsc)(!).g64
     - disk 0.93  [disk] "DIGITAL DUNGEON " (6 files) - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\ikari\ai200-io\rambo_iii.d64
@@ -278,9 +278,11 @@ Single files first, then whole images.
     - disk 1.00  [g64] "CC" (3 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\p\pitfall[activision_1984](!).zip :: pitfall[activision_1984](!).g64
     - disk 0.90  [g64] "CC" (3 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\p\pitfall_ii[activision_1984](!).zip :: pitfall_ii[activision_1984](!).g64
 - **Spelunker** **M**
+    - file 1.00  `SPELUNKER` (4 blk) on "UPLOAD BY OUG" _(too small)_ - downloads\Spelunker_1984_Broderbund_cr_Archibald__Spelunker_1984_Broderbund_cr_Archibald.d64
     - file 1.00  `SPELUNKER   ` (3 blk) on "-KRACKER JAX-" _(parameter disk)_ _(too small)_ - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\k\kracker_jax_vol1[kjpb_1986].zip :: kracker_jax_vol1[kjpb_1986].g64
     - disk 1.00  [g64] "SPELUNKER" (10 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\s\spelunker[ariolasoft_198x](pal)(!).zip :: spelunker[ariolasoft_198x](pal)(!).g64
     - disk 1.00  [g64] "SPELUNKER" (9 files) - D:\C64\C64_Preservation_Project_10th_Anniversary_Collection_G64\c64pp-g64-zip\s\spelunker[br0derbund_1984](!).zip :: spelunker[br0derbund_1984](!).g64
+    - disk 0.90  [disk] "UPLOAD BY OUG" (9 files) - downloads\Spelunker_1984_Broderbund_cr_Archibald__Spelunker_1984_Broderbund_cr_Archibald.d64
 - **Popeye**
     - file 0.92  `POPEYE 3+2M /TSM` (133 blk) on "SAMPLE.D64" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\legend\ai200-lethal\popeye 3 [tsm].d64
     - file 0.92  `POPEYE 3+2M /TSM` (133 blk) on "SAMPLE.D64" - D:\C64\tdd-groups-cd-2010-03-21\tdd-groups-cd\the_shaolin_mona\popeye 3 [tsm].d64
