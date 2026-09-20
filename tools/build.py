@@ -533,9 +533,11 @@ A side that came to more than one disk's worth is split into "(1 of 2)"
 and "(2 of 2)" images, because the copies available today carry loader
 intros the originals did not.
 
-DISKS.md lists every image, what is on it, and which archive each file came
-from. manifest.json is the same thing for a program to read - the disk
-photos and the NFC cards will key off it.
+DISKS.md lists every image, what is on it, the exact line to type to start
+it, and which archive each file came from. Check it for the whole-disk
+images: a few do not load at BASIC start, so RUN does nothing and they want
+a SYS instead. manifest.json is the same thing for a program to read - the
+disk photos and the NFC cards key off it.
 
 Titles that could not be found are listed in DISKS.md too, so the gaps are
 visible rather than silently missing.
