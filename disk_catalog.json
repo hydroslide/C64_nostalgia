@@ -1,0 +1,136 @@
+{
+  "_about": "Ryan's childhood C64 floppies, transcribed from photos/reference. One entry per physical disk; each side lists titles as written on the label, plus a normalized 'match' name for harvesting. '?' = uncertain reading.",
+  "disks": [
+    {"id": "D01", "photo": "20260918_221006.jpg", "position": "top", "label": "red square label",
+     "sides": [
+       {"side": 1, "titles": ["Rambo", "Commando", "Green Beret"], "match": ["Rambo: First Blood Part II", "Commando", "Green Beret"]},
+       {"side": 2, "titles": ["Time Pilot", "Heli?", "Ghosts n Goblins"], "match": ["Time Pilot", "?Helikopter Jagd", "Ghosts'n Goblins"], "notes": "'Heli' unresolved"}]},
+    {"id": "D02", "photo": "20260918_221006.jpg", "position": "bottom", "label": "J.R. Scanlon - Disk Lables",
+     "sides": [{"side": "1+2", "titles": ["World Games"], "match": ["World Games"]}]},
+    {"id": "D03", "photo": "20260918_221020.jpg", "label": "blue square label, Inmac sleeve",
+     "sides": [
+       {"side": 1, "titles": ["Action Biker"], "match": ["Action Biker"]},
+       {"side": 2, "titles": ["Battle Zone", "Decatalon", "Jungle Hunt", "Moon Patrol", "Mr Robot", "Pittfall II", "Popeye", "B.C. Quest for Tires"],
+        "match": ["Battlezone", "Decathlon", "Jungle Hunt", "Moon Patrol", "Mr. Robot and His Robot Factory", "Pitfall II: Lost Caverns", "Popeye", "B.C.'s Quest for Tires"]}]},
+    {"id": "D04", "photo": "20260918_221030.jpg", "label": "HP disk, orange label",
+     "sides": [
+       {"side": 1, "titles": ["Flight Simulator II"], "load": "LOAD\"*\",8,1", "match": ["Flight Simulator II"]},
+       {"side": 2, "titles": ["Bruce Lee"], "load": "LOAD\"*\",8,1", "match": ["Bruce Lee"]}]},
+    {"id": "D05", "photo": "20260918_221043.jpg", "label": "menu disk, sleeve has side lists",
+     "sides": [
+       {"side": 1, "menu": true, "load": "LOAD\"MENU\",8,1", "titles": ["A=River Raid", "B=Slamball", "C=Star Fire", "D=Fire One", "E=Moon Shuttle"], "match": ["River Raid", "Slamball", "Starfire", "Fire One", "Moon Shuttle"]},
+       {"side": 2, "menu": true, "load": "LOAD\"MENU\",8,1", "titles": ["A=Ghost Busters", "B=Ghost Manor", "C=H.E.R.O.", "D=Monster Smash"], "match": ["Ghostbusters", "Ghost Manor", "H.E.R.O.", "Monster Smash"]}]},
+    {"id": "D06", "photo": "20260918_221052.jpg", "label": "IBM diskette",
+     "sides": [
+       {"side": "front", "titles": ["Kung-Fu Master"], "match": ["Kung-Fu Master"]},
+       {"side": "back", "titles": ["Kung fu the exploding fist"], "match": ["The Way of the Exploding Fist"]}]},
+    {"id": "D07", "photo": "20260918_221100.jpg", "label": "E7 / E8",
+     "sides": [
+       {"side": 1, "catalog_no": "E7", "titles": ["Kermit Storymaker"], "load": "LOAD\"*\",8,1", "match": ["Kermit's Electronic Storymaker"]},
+       {"side": 2, "catalog_no": "E8", "titles": ["Turtle Toyland Jr"], "load": "LOAD\"*\",8,1", "match": ["Turtle Toyland Jr."]}]},
+    {"id": "D08", "photo": "20260918_221120.jpg", "position": "top",
+     "sides": [
+       {"side": 1, "titles": ["HesGames"], "load": "LOAD\"*\",8,1", "match": ["HesGames"]},
+       {"side": 2, "titles": ["Summer Games"], "match": ["Summer Games"]}]},
+    {"id": "D09", "photo": "20260918_221120.jpg", "position": "bottom",
+     "sides": [
+       {"side": 1, "titles": ["Pitfall", "Spelunker", "Popeye", "Raid Over Moscow"], "match": ["Pitfall!", "Spelunker", "Popeye", "Raid Over Moscow"]},
+       {"side": 2, "titles": ["Lords of Conquest"], "load": "LOAD\"*\",8,1", "match": ["Lords of Conquest"]}]},
+    {"id": "D10", "photo": "20260918_221129.jpg", "label": "Nashua, sleeve says F-15",
+     "sides": [
+       {"side": 1, "titles": ["F-15 Strike Eagle"], "match": ["F-15 Strike Eagle"]},
+       {"side": 2, "titles": ["Sublogic Football", "Mac Music"], "match": ["Sublogic Football", "?Mac Music"], "notes": "'Mac Music' unresolved"}]},
+    {"id": "D11", "photo": "20260918_221143.jpg", "position": "top", "label": "Visible Computer Supply",
+     "sides": [
+       {"side": 1, "titles": ["Fist the Ledgend Continues"], "match": ["Fist: The Legend Continues"]},
+       {"side": 2, "titles": ["Ninja"], "match": ["Ninja"]}]},
+    {"id": "D12", "photo": "20260918_221143.jpg", "position": "bottom",
+     "sides": [{"side": 1, "titles": ["Double Dare"], "match": ["Double Dare"]}]},
+    {"id": "D13", "photo": "20260918_221150.jpg", "label": "Verbatim DataLife",
+     "sides": [
+       {"side": 1, "titles": ["Double Dragon"], "match": ["Double Dragon"]},
+       {"side": 2, "titles": ["Robo-Cop"], "match": ["RoboCop"]}]},
+    {"id": "D14", "photo": "20260918_221155.jpg", "label": "ORIGINAL Epyx disk",
+     "sides": [{"side": "1+2", "titles": ["Summer Games II"], "match": ["Summer Games II"], "notes": "commercial original - dump it directly"}]},
+    {"id": "D15", "photo": "20260918_221215.jpg", "label": "Elizabeth's 8th Birthday Disk, E15",
+     "sides": [
+       {"side": 1, "titles": ["Kermit Storymaker"], "load": "LOAD\"*\",8,1", "match": ["Kermit's Electronic Storymaker"]},
+       {"side": 2, "titles": ["Hey Diddle Diddle"], "load": "LOAD\"SPIN\",8", "match": ["Hey Diddle Diddle"]}]},
+    {"id": "D16", "photo": "20260918_221234.jpg", "label": "menu disk, sleeve has printed list",
+     "sides": [{"side": 1, "menu": true, "load": "LOAD\"MENU\",8,1",
+       "titles": ["Caveman", "Cohn's Towers", "Pittfall", "Jungle Hunt", "Quest for Tires", "Popeye", "Mr. Robot"],
+       "match": ["Caveman", "Cohen's Towers", "Pitfall!", "Jungle Hunt", "B.C.'s Quest for Tires", "Popeye", "Mr. Robot and His Robot Factory"]}]},
+    {"id": "D17", "photo": "20260918_221300.jpg", "label": "Verbatim DataLife",
+     "sides": [
+       {"side": 1, "titles": ["Blue Thunder", "Agent U.S.A.", "Robin Wood", "Harrier Attack", "Boulder Dash 2"], "match": ["Blue Thunder", "Agent USA", "Robin of the Wood", "Harrier Attack", "Boulder Dash II"]},
+       {"side": 2, "titles": ["Shadowfire", "Ice Palace", "Rocketball", "Dolphin's Rune"], "match": ["Shadowfire", "Beyond the Ice Palace", "Rocketball", "The Dolphin's Rune"]}]},
+    {"id": "D18", "photo": "20260918_221317.jpg", "label": "Memorex, yellow label",
+     "sides": [{"side": 2, "load": "LOAD\"*\",8,1", "titles": ["Dragon Riders of Pern", "Spooks", "Boxing", "Wizards Lair"], "match": ["Dragonriders of Pern", "Spooks", "?Boxing", "Wizard's Lair"], "notes": "crossed out: Rad Skater, Hat Trick"}]},
+    {"id": "D19", "photo": "20260918_221326.jpg",
+     "sides": [{"side": 1, "titles": ["Star Wars"], "load": "LOAD\"$\",8", "match": ["Star Wars"]}]},
+    {"id": "D20", "photo": "20260918_221351.jpg", "position": "top", "label": "E19",
+     "sides": [
+       {"side": 1, "titles": ["Haunted House"], "load": "LOAD\"*\",8,1", "match": ["Haunted House"]},
+       {"side": 2, "titles": ["Mystery at Pincrest Manor"], "match": ["Mystery at Pinecrest Manor"]}]},
+    {"id": "D21", "photo": "20260918_221351.jpg", "position": "bottom", "label": "Dataproducts New England",
+     "sides": [
+       {"side": 1, "titles": ["West Bank", "Gauntlet"], "match": ["West Bank", "Gauntlet"]},
+       {"side": 2, "titles": ["Gauntlet Deeper Dungeons"], "match": ["Gauntlet: The Deeper Dungeons"], "notes": "Space Taxi crossed out"}]},
+    {"id": "D22", "photo": "20260918_221409.jpg", "position": "top",
+     "sides": [
+       {"side": 1, "titles": ["Epyx Karate"], "match": ["World Karate Championship"]},
+       {"side": 2, "titles": ["Golf (Leader Board)"], "match": ["Leader Board"]}]},
+    {"id": "D23", "photo": "20260918_221409.jpg", "position": "bottom", "label": "Maxell MD2-D",
+     "sides": [{"side": 1, "titles": ["10th Frame (Bowling)", "Leader Board Golf II"], "match": ["10th Frame", "?Leader Board Tournament / World Class Leader Board"]}]},
+    {"id": "D24", "photo": "20260918_221430.jpg",
+     "sides": [{"side": "1+2", "titles": ["Adventure Construction Set (Master)"], "match": ["Adventure Construction Set"]}]},
+    {"id": "D25", "photo": "20260918_221454.jpg", "position": "top",
+     "sides": [
+       {"side": 1, "titles": ["Centropods & much more"], "match": ["Centropods"], "notes": "other files unknown"},
+       {"side": 2, "titles": ["Bagitman (SYS 16384)", "Up'n Down", "Genesis", "Marios Brewery", "Mr Wimpy"], "match": ["Bagitman", "Up'n Down", "Genesis", "Mario's Brewery", "Mr. Wimpy"]}]},
+    {"id": "D26", "photo": "20260918_221454.jpg", "position": "bottom", "label": "Verbatim DataLife",
+     "sides": [
+       {"side": 1, "titles": ["Mister Do", "Wargames", "Big Top Barney"], "match": ["Mr. Do!", "WarGames", "Big Top Barney"]},
+       {"side": 2, "titles": ["Hacker", "Hacker II", "Dangermouse II"], "match": ["Hacker", "Hacker II", "?Danger Mouse in the Black Forest Chateau"]}]},
+    {"id": "D27", "photo": "20260918_221504.jpg", "label": "J.R. Scanlon - Disk Lables",
+     "sides": [
+       {"side": 1, "titles": ["Hattrick", "Rad Skater"], "match": ["Hat Trick", "?Rad Skater"]},
+       {"side": 2, "titles": ["Fist the Ledgend Continues"], "match": ["Fist: The Legend Continues"]}]},
+    {"id": "D28", "photo": "20260918_221515.jpg", "label": "HP disk, Inmac sleeve",
+     "sides": [{"side": "1+2", "titles": ["Winter Games"], "load": "LOAD\"*\",8,1", "match": ["Winter Games"]}]},
+    {"id": "D29", "photo": "20260918_221530.jpg", "label": "'Utility Backup' written over older label",
+     "sides": [
+       {"side": 1, "titles": ["Mario Bros"], "load": "LOAD\"*\",8,1", "match": ["Mario Bros."]},
+       {"side": 2, "titles": ["36 games"], "load": "LOAD\"*\",8,1", "match": ["?36-game compilation"]}]},
+    {"id": "D30", "photo": "20260918_221536.jpg",
+     "sides": [{"side": 1, "titles": ["Donald Duck's Playground"], "load": "LOAD\"*\",8,1", "match": ["Donald Duck's Playground"]}]},
+    {"id": "D31", "photo": "20260918_221611.jpg", "label": "BASF, menu disk",
+     "sides": [
+       {"side": 1, "menu": true, "load": "LOAD\"MENU\",8,1", "titles": ["Dino Egg", "Donkey Kong"], "match": ["Dino Eggs", "Donkey Kong"]},
+       {"side": 2, "titles": ["Sublogic Football"], "load": "RUN", "match": ["Sublogic Football"]}]},
+    {"id": "D32", "photo": "20260918_221618.jpg", "label": "Inmac International Standard",
+     "sides": [{"side": 1, "titles": ["West Bank", "Gauntlet"], "match": ["West Bank", "Gauntlet"], "notes": "same pair as D21 side 1"}]},
+    {"id": "D33", "photo": "20260918_221623.jpg", "label": "Maxell MD2-D",
+     "sides": [{"side": 1, "titles": ["Sticky Bear Typing"], "match": ["Stickybear Typing"]}]},
+    {"id": "D34", "photo": "20260918_221632.jpg", "label": "E5 / E6",
+     "sides": [
+       {"side": 1, "catalog_no": "E5", "titles": ["Songwriter"], "load": "LOAD\"SONG WRITER\",8,1", "match": ["Songwriter"]},
+       {"side": 2, "catalog_no": "E6", "titles": ["The Factory"], "load": "LOAD\"*\",8,1", "match": ["The Factory"]}]},
+    {"id": "D35", "photo": "20260918_221707.jpg",
+     "sides": [
+       {"side": 1, "titles": ["Gyruss"], "match": ["Gyruss"]},
+       {"side": 2, "titles": ["Slapshot"], "match": ["Slap Shot"]}]},
+    {"id": "D36", "photo": "20260918_221730.jpg", "label": "E16",
+     "sides": [{"side": 1, "catalog_no": "E16", "titles": ["The Game Show"], "load": "LOAD\"AI\",8 / RUN", "match": ["The Game Show"]}]},
+    {"id": "D37", "photo": "20260918_221803.jpg", "label": "J.R. Scanlon - Disk Lables",
+     "sides": [{"side": "1+2", "titles": ["Druid", "Dragon Skull", "Paper Boy", "Dragons Lair"], "match": ["Druid", "Dragonskulle", "Paperboy", "Dragon's Lair"]}]},
+    {"id": "D38", "photo": "20260918_221816.jpg", "label": "Memorex",
+     "sides": [{"side": 1, "titles": ["Lode Runner"], "load": "LOAD\"LR\",8,1", "match": ["Lode Runner"]}]},
+    {"id": "D39", "photo": "20260918_221821.jpg", "label": "yellow square label",
+     "sides": [{"side": 1, "titles": ["Mail Order Monsters"], "match": ["Mail Order Monsters"]}]},
+    {"id": "D40", "photo": "20260918_221842.jpg", "label": "3M, green label",
+     "sides": [
+       {"side": 1, "titles": ["Assembler"], "match": ["?Assembler"]},
+       {"side": 2, "menu": true, "load": "LOAD\"MENU\",8 / RUN", "titles": ["Pharo's Curse", "Pinball", "Stellar 7"], "match": ["Pharaoh's Curse", "?Pinball", "Stellar 7"]}]}
+  ]
+}
