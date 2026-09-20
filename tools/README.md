@@ -83,6 +83,19 @@ To look around the index by hand:
 python3 harvest.py find "lode runner"
 ```
 
+## 3b. Fetch what nothing local has
+
+```
+python3 fetch.py search                 # candidates for every unsourced title
+python3 fetch.py get <identifier> ...   # download the ones you picked
+```
+
+`search` reads the titles still marked as having no source and queries the
+Internet Archive's C64 library for each, trying a few spellings because the
+catalogue writes names its own way ("Mr. Wimpy: The Hamburger Game"). It only
+prints. `get` downloads into `downloads/`, which you then add to the `index`
+command in step 1 like any other collection.
+
 ## 4. Build
 
 ```
@@ -114,6 +127,18 @@ restarts a program after a `LOAD`, so a game that lives at BASIC start simply
 takes over, and anything else leaves a flag in the tape buffer that line 1
 reads and `SYS`es into. `build.py` reads each file's load address to decide
 which of the two applies.
+
+### Disk photos
+
+```
+python3 diskart.py                      # from photos/reference
+python3 diskart.py --from ../photos/archive
+```
+
+Writes a 320x200 PNG beside every image, named the way Pi1541 wants it (the
+image's name with `.png` in place of its extension, and exactly that size or it
+is skipped in silence). With `DisplayPNGIcons = 1` in `options.txt` the browser
+shows the floppy each image came from.
 
 ## 5. Check it actually works
 
