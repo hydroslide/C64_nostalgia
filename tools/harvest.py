@@ -522,7 +522,6 @@ def apply_override(overrides: dict, sid: str, title: str, item: dict) -> dict:
         if key in overrides:
             fixed = dict(overrides[key])
             fixed.setdefault("title", title)
-            fixed.setdefault("start", item.get("start", "run"))
             return fixed
     return item
 
@@ -575,7 +574,9 @@ def write_selection_draft(results, overrides: dict):
 
 
 def draft_item(it: dict) -> dict:
-    item = {"title": it["title"], "start": "run"}
+    # No "start" here on purpose: build.py reads the file's load address and
+    # decides between RUN and SYS. Setting one in overrides.json wins.
+    item = {"title": it["title"]}
     f = it["hits"][0] if it["hits"] else None
     im = it["images"][0] if it["images"] else None
     # a multi-load game needs a whole disk, and so does anything with no

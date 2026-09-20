@@ -38,7 +38,8 @@ def find_vice() -> str:
 
 
 def shoot(target: Path, out_png: Path, seconds: float, keys: str | None,
-          key_delay: float, autostart_with_colon: bool, true_drive: bool) -> bool:
+          key_delay: float, autostart_with_colon: bool, true_drive: bool,
+          attach: bool = False) -> bool:
     out_png.parent.mkdir(parents=True, exist_ok=True)
     cmd = [find_vice(), "-console", "-warp", "-silent", "-sounddev", "dummy",
            "-limitcycles", str(int(seconds * CYCLES_PER_SECOND)),
@@ -53,7 +54,14 @@ def shoot(target: Path, out_png: Path, seconds: float, keys: str | None,
         # VICE types this into the keyboard buffer once the emulation is up.
         cmd += ["-keybuf", keys]
         cmd += ["-keybuf-delay", str(int(key_delay * CYCLES_PER_SECOND))]
-    cmd += ["-autostart", str(target)]
+    if attach:
+        # Attaching and typing the LOAD by hand is what the real machine does,
+        # and it keeps true drive emulation in play. VICE's autostart quietly
+        # swaps in the virtual drive, which skips the SEARCHING/LOADING lines
+        # a menu's screen arithmetic depends on.
+        cmd += ["-8", str(target)]
+    else:
+        cmd += ["-autostart", str(target)]
     r = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
     if not out_png.exists():
         sys.stderr.write(f"! {target.name}: no screenshot\n{r.stdout[-400:]}{r.stderr[-400:]}\n")
@@ -69,6 +77,8 @@ def main():
     ap.add_argument("--keys", help="text to push into the keyboard buffer")
     ap.add_argument("--key-delay", type=float, default=8.0, help="emulated seconds before the keys go in")
     ap.add_argument("--colon", action="store_true", help="autostart with RUN: instead of RUN")
+    ap.add_argument("--attach", action="store_true",
+                    help="attach the disk and type the LOAD, instead of autostarting")
     ap.add_argument("--true-drive", action="store_true",
                     help="emulate the 1541 cycle-exactly - slow, but needed by custom loaders")
     args = ap.parse_args()
@@ -77,7 +87,7 @@ def main():
     for t in args.targets:
         p = Path(t)
         png = out / (p.stem + ".png")
-        if shoot(p, png, args.seconds, args.keys, args.key_delay, args.colon, args.true_drive):
+        if shoot(p, png, args.seconds, args.keys, args.key_delay, args.colon, args.true_drive, args.attach):
             ok += 1
             print(f"  + {png}")
     print(f"{ok}/{len(args.targets)} screenshots -> {out}")
