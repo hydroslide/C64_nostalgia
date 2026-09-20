@@ -80,14 +80,17 @@ Then on the C64:
 | The image | Type this |
 |---|---|
 | a `.d64` with a menu (the letter-menu disks) | `LOAD"MENU",8,1` then `RUN` |
-| any other `.d64` | `LOAD"*",8,1` then `RUN` |
-| a `.g64` | `LOAD"*",8,1` then `RUN` |
+| a `.d64` rebuilt from single files | `LOAD"*",8,1` then `RUN` |
+| a whole-disk `.d64` or `.g64` | usually `LOAD"*",8,1` then `RUN` |
 
 On a menu disk you get a list of games with a letter each. **Press the letter**
 — it loads the game and starts it on its own. Nothing else to type.
 
-`1541\DISKS.md` on the card lists every image, what's on it, and which archive
-each file came from, including the handful that couldn't be found.
+**The exact command for every image is in `1541\DISKS.md`** on the card. It
+matters for the whole-disk ones: a few don't load at BASIC start, so `RUN` does
+nothing and they need a `SYS` instead. `DISKS.md` gives the line that will work
+for each, along with what's on it and which archive each file came from —
+including the handful that couldn't be found.
 
 ## 5. What the file types mean
 
