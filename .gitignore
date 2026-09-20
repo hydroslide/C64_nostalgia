@@ -1,3 +1,9 @@
 .DS_Store
 __pycache__/
 *.pyc
+
+# Harvest working files: rebuilt from the collections, machine-specific.
+tools/index.jsonl
+tools/candidates.json
+tools/selections.draft.json
+tools/out/
