@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """Rebuild the original disks from selections.json into a Pi1541-ready folder.
 
-    python3 build.py [--only D05-1] [--out out/]
+    python3 build.py [--only D05-1] [--out ../card]
 
 Needs VICE's `c1541` and `petcat` on PATH (macOS: `brew install vice`;
 Debian/Raspberry Pi OS: `apt install vice`; Windows: `winget install
 VICE-Team.VICE.SDL2`).
 
-Output is one folder per physical disk, named the way the label reads, so
-the Pi1541's own browser reads like the original shoebox:
+Everything lands in `card/` at the top of the repo - that whole folder is
+what goes on the Pi1541's SD card. One folder per physical disk, named the
+way the label reads, so the Pi1541's own browser reads like the shoebox:
 
-    out/D05 River Raid, Slamball, Star Fire.../
-        D05-1 menu.d64              <- rebuilt side, MENU program first
-        D05-1 Moon Shuttle.g64      <- needed a disk of its own
+    card/D05 River Raid, Slamball, Star Fire.../
+        D05-1 Slamball, Starfire, Fire One.d64   <- rebuilt side, MENU first
+        D05-1 Moon Shuttle.g64                   <- needed a disk of its own
 
 Items with "whole_image" are copied out whole - multi-load games, and
 originals that were never cracked down to a single file. Everything else is
@@ -20,8 +21,9 @@ extracted from its source and written onto a fresh .d64; if the side was a
 menu disk a BASIC MENU program is written first, so LOAD"MENU",8,1 and RUN
 work the way they did.
 
-out/manifest.json records where every single file came from, and DISKS.md is
-the same thing for a human, including what could not be found.
+card/manifest.json records where every single file came from; DISKS.md is
+the same for a human, including what could not be found, and README.txt
+explains the card to whoever is holding it.
 """
 from __future__ import annotations
 
@@ -218,7 +220,6 @@ def disk_folders() -> dict[str, str]:
 # ----------------------------------------------------------------- build ---
 def build_side(sid: str, entry: dict, folder: Path, auto_menu: bool,
                manifest: list, cache: dict):
-    folder.mkdir(parents=True, exist_ok=True)
     file_items, whole, missing = [], [], []
     for it in entry["items"]:
         if it.get("skip"):
@@ -231,6 +232,9 @@ def build_side(sid: str, entry: dict, folder: Path, auto_menu: bool,
             missing.append(it)
             manifest.append({"side": sid, "title": it["title"], "kind": "missing",
                              "why": it.get("todo", "no source")})
+
+    if file_items or whole:
+        folder.mkdir(parents=True, exist_ok=True)
 
     for it in whole:
         w = it["whole_image"]
@@ -365,10 +369,43 @@ def write_disks_md(manifest: list, out: Path):
     (out / "DISKS.md").write_text("\n".join(lines), encoding="utf-8")
 
 
+CARD_README = """How to use this card
+====================
+
+One folder per original floppy, named the way its label reads. Inside a
+folder, each file is one side of that disk.
+
+  *.d64   a rebuilt side. Mount it, then:
+            LOAD"MENU",8,1   and   RUN      if the side had a menu
+            LOAD"*",8,1      and   RUN      otherwise
+          A menu lists its games with a letter each; press the letter and
+          the game loads and starts by itself.
+
+  *.g64   an original disk, bit for bit, copy protection and all. These are
+          games that were never cracked down to a single file, or that load
+          more data while you play. Mount and:
+            LOAD"*",8,1      and   RUN
+          A few of these are the real original and may ask for something
+          from the manual.
+
+A side that came to more than one disk's worth is split into "(1 of 2)"
+and "(2 of 2)" images, because the copies available today carry loader
+intros the originals did not.
+
+DISKS.md lists every image, what is on it, and which archive each file came
+from. manifest.json is the same thing for a program to read - the disk
+photos and the NFC cards will key off it.
+
+Titles that could not be found are listed in DISKS.md too, so the gaps are
+visible rather than silently missing.
+"""
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--selections", default=str(HERE / "selections.json"))
-    ap.add_argument("--out", default=str(HERE / "out"))
+    ap.add_argument("--out", default=str(HERE.parent / "card"),
+                    help="the folder to copy onto the Pi1541's SD card")
     ap.add_argument("--only", nargs="*", help="build only these side ids, e.g. D05-1")
     ap.add_argument("--auto-menu", action="store_true", help="add a menu to any side with 2+ games")
     args = ap.parse_args()
@@ -392,6 +429,7 @@ def main():
             print(f"  ! {sid} failed: {e}")
     (out / "manifest.json").write_text(json.dumps(manifest, indent=1))
     write_disks_md(manifest, out)
+    (out / "README.txt").write_text(CARD_README, encoding="utf-8")
     built = sum(1 for m in manifest if m["kind"] != "missing")
     print(f"\n{built} images -> {out}   ({sum(1 for m in manifest if m['kind'] == 'missing')} titles had no source)")
 

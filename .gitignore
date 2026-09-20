@@ -7,4 +7,5 @@ tools/index.jsonl
 tools/candidates.json
 tools/selections.draft.json
 tools/out/
+card/
 tools/shots/

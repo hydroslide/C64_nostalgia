@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Boot every built image in VICE and tile the results into contact sheets.
 
-    python3 verify.py                    # everything in out/
+    python3 verify.py                    # everything on the card
     python3 verify.py --only D05         # one disk
     python3 verify.py --sheets-only      # re-tile existing screenshots
 
@@ -19,6 +19,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from PIL import Image, ImageDraw
@@ -86,25 +88,37 @@ def sheet(pngs: list[tuple[Path, str]], out_png: Path):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--out", default=str(HERE / "out"))
+    ap.add_argument("--out", default=str(HERE.parent / "card"))
     ap.add_argument("--shots", default=str(HERE / "shots"))
     ap.add_argument("--only", help="limit to side ids starting with this, e.g. D05")
-    ap.add_argument("--seconds", type=float, default=20.0)
+    ap.add_argument("--seconds", type=float, default=15.0)
     ap.add_argument("--sheets-only", action="store_true", help="skip VICE, just re-tile")
+    ap.add_argument("--workers", type=int, default=max(2, (os.cpu_count() or 4) - 1),
+                    help="how many VICE instances to run at once")
     args = ap.parse_args()
 
     out, shots = Path(args.out), Path(args.shots)
     shots.mkdir(parents=True, exist_ok=True)
     manifest = json.loads((out / "manifest.json").read_text())
 
-    taken: list[tuple[Path, str]] = []
+    jobs = []
     for m, path in targets(out, manifest, args.only):
         for job in shots_for(m, path, shots, args.seconds):
-            if not args.sheets_only:
-                shoot(path, job["png"], job["seconds"], job["keys"],
-                      job["seconds"] * 0.06, False, job["true_drive"], job["attach"])
-                print(f"  . {job['caption']}")
-            taken.append((job["png"], job["caption"]))
+            job["path"] = path
+            jobs.append(job)
+
+    if not args.sheets_only:
+        # Each shot is one VICE process sitting on one core, so the wall
+        # clock is just the queue divided by however many cores there are.
+        def take(job):
+            shoot(job["path"], job["png"], job["seconds"], job["keys"],
+                  job["seconds"] * 0.06, False, job["true_drive"], job["attach"])
+            print(f"  . {job['caption']}", flush=True)
+
+        with ThreadPoolExecutor(max_workers=args.workers) as pool:
+            list(pool.map(take, jobs))
+
+    taken = [(j["png"], j["caption"]) for j in jobs]
 
     sheets = shots / "sheets"
     sheets.mkdir(exist_ok=True)
