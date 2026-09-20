@@ -329,6 +329,30 @@ def disk_folders() -> dict[str, str]:
     return out
 
 
+def whole_image_load(data: bytes, ext: str) -> dict:
+    """Work out what to actually type to start a whole image.
+
+    LOAD"*",8,1 gets the first file onto the machine; whether RUN then starts
+    it depends on where that file lives. A file at BASIC start is a stub and
+    RUN is right; anything else needs a SYS, and telling someone to type RUN
+    when it cannot work is worse than saying nothing.
+    """
+    if ext == "g64":
+        # A GCR image is usually a protected original with its own loader;
+        # there is nothing dependable to read a load address out of.
+        return {"load": 'LOAD"*",8,1', "start": "run"}
+    try:
+        img = open_image(data, lenient=True)
+        first = next(e for e in img.entries if e.ftype == "PRG" and e.blocks)
+        body = img.read_file(first)
+        addr = body[0] | body[1] << 8
+    except Exception:  # noqa: BLE001
+        return {"load": 'LOAD"*",8,1', "start": "run"}
+    if addr == BASIC_START:
+        return {"load": f'LOAD"{first.name}",8', "start": "run"}
+    return {"load": f'LOAD"{first.name}",8,1', "start": f"sys {addr}"}
+
+
 # ----------------------------------------------------------------- build ---
 def build_side(sid: str, entry: dict, folder: Path, auto_menu: bool,
                manifest: list, cache: dict, style: str | None = None):
@@ -358,6 +382,7 @@ def build_side(sid: str, entry: dict, folder: Path, auto_menu: bool,
         manifest.append({"side": sid, "title": it["title"], "image": name,
                          "folder": folder.name, "kind": "whole_image",
                          "note": it.get("note"),
+                         **whole_image_load(data, ext),
                          "from": w["src"] + (f"::{w['member']}" if w.get("member") else "")})
         print(f"  + {name}  (whole image)")
 
@@ -465,6 +490,8 @@ def write_disks_md(manifest: list, out: Path):
             head = f"- `{m['image']}`"
             if m["kind"] == "whole_image":
                 lines.append(f"{head} — **{m['title']}**, whole image")
+                cmd = m.get("load") or 'LOAD"*",8,1'
+                lines.append(f"    - `{cmd}` then `{m.get('start', 'run')}`")
                 lines.append(f"    - from `{m['from']}`")
                 if m.get("note"):
                     lines.append(f"    - {m['note']}")
